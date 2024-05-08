@@ -1,620 +1,1099 @@
-<p>&nbsp;</p><p align="center" class="MsoNormal" style="text-align: center;"><span lang="EN-US" style="font-size: 14pt; line-height: 107%; mso-bidi-font-size: 11.0pt;">ETH prac<o:p></o:p></span></p>
+<p></p><p align="center" class="MsoNormal" style="text-align: center;"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">IR prac <o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">ETH
-practical Notes<o:p></o:p></span></p>
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">Pr1: Spelling correction<o:p></o:p></span></b></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">def
+calculate(str1, str2):<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">Pr2<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>len_str1 = len(str1) + 1<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">A.
-Cryptool for Encryption and Decryption<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>len_str2 = len(str2) + 1<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>edm = [[0] * len_str1 for _ in
+range(len_str2)]<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Steps:<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp; </span><o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1. Open Cryptool<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>for i in range(len_str1):<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2. You will see a .txt
-file delete everything in it.<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>edm[0][i] = i<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>3. Now write some text
-in it like "Hello World"<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>for j in range(len_str2):<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>4. Go to Encrypt/Decrypt
-&gt; Symmetric(modern) &gt; RC4<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>edm[j][0] = j<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>5. Keep the key length 8
-bit; change 00 to something like "12"<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>6. Click on Encrypt.
-(Encrypted Text is now visible)<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>for i in range(1, len_str2):<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>7. Again go to
-Encrypt/Decrypt &gt; Symmetric(modern) &gt; RC4<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for j in range(1, len_str1):<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>8. Keep the key length 8
-bit; and change 00 by "12"<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if str2[i - 1] == str1[j - 1]:<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>9. Click on Decrypt.
-(Decrypted text is now visible).<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>cost = 0<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>else:<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>cost = 1<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">B.
-Cain and Abel for windows password cracking<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>insert = edm[i][j - 1] + 1<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Steps:<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>delete = edm[i - 1][j] + 1<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1. Launch Cain<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>substitute = edm[i - 1][j - 1] +
+cost<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2. Go to Crackers &gt;
-LM &amp; NTLM Hashes<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>edm[i][j] = min(insert, delete,
+substitute)<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>3. Click on blue + icon
-on top &gt; select include password history <span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>hashes &gt; next<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>4. Right Click on ITCS
-&gt; Dictionary Attack &gt; NTLM Hashes<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>for i in range(len_str2):<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>5. right click on the
-wordlist file and Remove it<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for j in range(len_str1):<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>6. Again right click
-&gt; add to list &gt; wordlist.txt<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if i==0:<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>7. Click start <o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>print(str1[j-1] if j&gt;0 else
+" ",end=" ")<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>8. after completetion
-click exit password will be visible.<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>else:<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>print(str2[i-1] if j==0 else
+edm[i][j],end=" ")<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">C.
-Cain and Abel for decode hash<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>print()<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Steps:<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>print("Edit distance:",
+edm[-1][-1])<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1. Open Cain<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">str1
+= str(input("Enter the first string: "))<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2. Select Crackers &gt;
-MD5 Hashes<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">str2
+= str(input("Enter the second string: "))<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>3. Click on Hash
-Calculator<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">calculate(str1,
+str2)<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>4. Type in a Text &gt;
-click calculate &gt; copy the MD5 hash value &gt; exit<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>5. Click on the screen
-and click on add(+) paste the hash value.<o:p></o:p></span></p>
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">Pr2:Document indexing and retrieval<o:p></o:p></span></b></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>6. Right click on hash
-value and select dictionary attack.<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">doc1="I
+am student of ruparel college"<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>7. Right click on the
-file section and click add to list. <o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">doc2="I
+am studying computers from ruparel college"<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>8. select Wordlist.txt
-file.<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>9. clcik start<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">tokens1
+= doc1.lower().split() <o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">tokens2
+= doc2.lower().split()<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">====================================================================================<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">terms=list(set(tokens1+tokens2))<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">Pr3<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">inverted_index
+= {} <o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">A.Linux
-Network Analysis<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">for
+term in terms:<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Steps:<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>documents = []<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1. Launch Kali Linux<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>if term in tokens1:<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2. Open Terminal<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>documents.append("Document
+1")<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>3. Enter the following
-commands.<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>if term in tokens2:<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>i.<span style="mso-spacerun: yes;">&nbsp; </span>ifconfig<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>documents.append("Document
+2")<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>ii. ping
-www.google.com (press Cltr + C to stop the ping)<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>inverted_index[term] = documents<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>iii.netstat<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>iv.
-traceroute www.google.com<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">for
+term, documents in inverted_index.items():<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>print(term, "-&gt;",
+",".join(documents))<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">B.ARP
-poisoning<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Steps:<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">str=input('enter
+a query:')<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1. Launch Kali Linux<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">tokens1
+= str.lower().split() <o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2. Open Terminal<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">for
+term in tokens1:<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>3. Enter the following
-commands<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>if term in inverted_index:<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>i.<span style="mso-spacerun: yes;">&nbsp; </span>arp -a<span style="mso-spacerun: yes;">&nbsp;
-</span><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>print(term)<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>o/p:
-? (192.168.0.1) at &lt;incomplete&gt; on eth0<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>print(inverted_index.get(term))<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>ii. sudo arp
--s 192.168.0.1 1a:2b:3c:4d:5e:1a<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>o/p:
-[sudo] password for kali: <o:p></o:p></span></p>
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">Pr3a: Precision, recall f-measures<o:p></o:p></span></b></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 11;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count: 11;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count: 11;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count: 4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun: yes;">&nbsp;&nbsp; </span><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">fetch=set(["doc1","doc2","doc3"])<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>iii. arp -a<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">relevant=set(["doc1","doc4"])<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun: yes;">&nbsp;</span>o/p:<span style="mso-tab-count: 1;">&nbsp;&nbsp; </span>?
-(192.168.0.1) at 1a:2b:3c:4d:5e:1a [ether] PERM on eth0<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 6;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>?
-(192.168.0.1) at 1a:2b:3c:4d:5e:1a [ether] PERM on eth0<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">def
+calculate(fetch,relevant):<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>tp=len(fetch.intersection(relevant))<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">==================================================================================<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>fp=len(fetch.difference(relevant))<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">Pr4<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>fn=len(relevant.difference(fetch))<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">A.
-Using namp to perform -ACK, SYN, FIN, NULL, XMAS<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Steps:<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>print("true poitive:",tp)<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1. 1. Launch Kali Linux<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>print("false poitive:",fp)<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2. Open Terminal<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>print("false negative:",fn)<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>3. Enter the following
-commands<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>a. ACK Scan:
-sudo nmap -sA -T4 www.ruparel.edu<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>precision=tp/(tp+fp)<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>b. SYN Scan:
-sudo nmap -sS -T4 www.ruparel.edu<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>recall=tp/(tp+fn)<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>c. FIN Scan:
-sudo nmap -sF -T4 www.ruparel.edu<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>f_score=2*precision*recall/(precision+recall)<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>d. NULL
-Scan: sudo nmap -sN -T4 www.ruparel.edu<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>e. XMAS
-Scan: sudo nmap -sX -T4 www.ruparel.edu<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>print("precion:",precision)<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>print("recall",recall)<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">B.
-port scanning using namp<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>print("f_score",f_score)<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>nmap
--p22,113,139 www.ruparel.edu<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">calculate(fetch,relevant)<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">==================================================================================<o:p></o:p></span></p>
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">Pr3b: Average precision recall score<o:p></o:p></span></b></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">Pr5<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">from
+sklearn.metrics import average_precision_score<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">A.
-Network Analysis using Wireshark<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">y_true=[0,1,1,0,1,1]<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Steps:<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">y_score=[0.25,0.3,0.12,0.9,0.25,0.63]<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1. Open Wireshark and
-start recording.<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2. Apply
-"http" filter<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">avg=average_precision_score(y_true,y_score)<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>3. go to
-http://testphp.vulnweb.com/login.php<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">print("average_precision_score:",avg)<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>4. enter username and
-password &gt; click login<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>5. come back to
-wireshark and double click on userinfo.php file<o:p></o:p></span></p>
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">Pr4: Page Rank/Link analysis<o:p></o:p></span></b></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>6. on the new window
-uname and pass will be visible under URL encoded section<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">def
+pagerank():<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>print("Enter the matrix:")<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">B.
-DOS using nemesis<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>array_input = []<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Steps:<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1. Download Nemesis from
-https://sourceforge.net/projects/nemesisddos/files/NEMESIS%201.0.0.zip/download<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>for x in range(3):<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2. Extract the file<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>array_input.append([float(y) for y in
+input().split()])<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>3. go into the folder
-and open cmd<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>print(array_input)<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>4. type the command
-nemesis<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>finalmat=[1,1,1]<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>itr=int(input("Enter the number of
+iteration"))<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">=========================================================================================<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">Pr6<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>for loop in range(itr):<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">A.
-Cross Site Scripting attack</span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>print("Iteration:",loop+1)<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Steps:<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>cnt=0<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1.<span style="mso-spacerun: yes;">&nbsp; </span>Launch Kali linux terminal and run the
-following commands<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2.<span style="mso-spacerun: yes;">&nbsp; </span>sudo apt update<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for row in range(len(array_input)):<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>3.<span style="mso-spacerun: yes;">&nbsp; </span>sudo apt install -y apache2 mariadb-server
-mariadb-client php php-mysqli php-gd libapache2-mod-php<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>sum=0<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>4.<span style="mso-spacerun: yes;">&nbsp; </span>sudo apt install git<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for col in
+range(len(array_input[row])):<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>5.<span style="mso-spacerun: yes;">&nbsp; </span>wget
-https://raw.githubusercontent.com/IamCarron/DVWA-Script/main/Install-DVWA.sh<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if(array_input[col][row]== 1):<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>6.<span style="mso-spacerun: yes;">&nbsp; </span>chmod +x Install-DVWA.sh<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for i in range(3):<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>7.<span style="mso-spacerun: yes;">&nbsp; </span>sudo ./Install-DVWA.sh<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>if(array_input[col][i]==1):<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>8.<span style="mso-spacerun: yes;">&nbsp; </span>open browser type in the url localhost/DVWA<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>cnt=cnt+1<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>9.<span style="mso-spacerun: yes;">&nbsp; </span>credentials to login is admin &amp; password<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>sum+=finalmat[col]/cnt<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>10. go to third option
-Setup/Reset DB &gt; scroll down and reset the database<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>cnt=0<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>11. go to 4th last
-option DVWA Security and set security to low<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>finalmat[row]=0.5+(0.5*sum)<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>12. go to XSS(Stored)
-and enter the folllowing database<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>print(finalmat[row],'')<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Name:
-test1<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">pagerank()<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Message:
-&lt;script&gt;alert("Attack")&lt;/script&gt;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>and
-click sign</span></p><p class="MsoNormal"><br /></p><p class="MsoNormal" style="text-align: center;"><span lang="EN-US" style="font-size: 14pt; line-height: 19.9733px;">f<b>or DVWA installation(</b></span><b style="font-size: 18.6667px;">optional&nbsp;</b><b style="font-size: 14pt;">)</b></p><p class="MsoNormal"><span style="font-size: 18.6667px;">1 .sudo apt install dvwa</span></p><p class="MsoNormal"><span style="font-size: 18.6667px;"><span lang="EN-US" style="line-height: 19.9734px;"></span></span></p><p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">2. dvwa-start&nbsp;</span></span></p><p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">remaining steps are same</span></span></p><p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;"><br /></span></span></p><p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><o:p></o:p></span></p>
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">Pr5a: Boolean Retrieval Model<o:p></o:p></span></b></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">===================================================================================================================<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">plays={"Anthony
+and Cleopatra":"anthony is there, brutus is ceaser is with cleopatra
+mercy worser.",<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">Pr7<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>"Julius Ceaser":"anthony
+is there, brutus is ceaser is but calpurnia is.",<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">A.
-Tamper Data<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>"The Tempest":"mrecy
+worser","Hamlet":"ceaser and brutus are present with mercy
+and worser",<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Steps:<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>"Othello":"ceaser is
+present with mercy and worser","Macbeth":"anthony is
+there,ceaser,mercy."}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1. Open Firefox browser
-and Search for "Add ons"<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">words=["anthony","brutus","ceaser","calpurnia","cleopatra","mercy","worser"]<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2. Go to Firefox addons
-website<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">vector_matrix=[[0
+for i in range(len(plays))]for j in range(len(words))]<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>3. Search for
-"Tamper Data for FF Quantum" and add the extension to firefox<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">tokens=[]<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>4. Go to
-https://opensource-demo.orangehrmlive.com/web/index.php/auth/login<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">string_list=[]<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>5. while being on the
-login page turn on the tamper data extension(Click Yes)<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>6. Enter username and
-password as Admin &amp;&amp; admin123 and click enter.<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">text_list=list((plays.values()))<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>7. Tamper data window
-will pop-up.<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">for
+i in range(len(words)):<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">B.
-Cookie Manager<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>for j in range(len(text_list)):<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Steps:<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if words[i] in text_list[j]:<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1. Open Firefox browser
-and Search for "Add ons"<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>vector_matrix[i][j]=1<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2. Go to Firefox addons
-website<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>else:<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>3. Search for
-"Cookie Manager by Rob W" and add the extension to firefox<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>vector_matrix[i][j]=0<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>4. Go to
-https://opensource-demo.orangehrmlive.com/web/index.php/auth/login<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>5. Enter username and
-password as Admin &amp;&amp; admin123 and click enter.<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>6. Go to Cookie Manager
-Add on &gt; Open Cookie manager for Current page &gt; select the orangehmr
-cookie &gt; More action &gt;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">for
+i in vector_matrix:<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Export
-select cookies &gt; Export &gt; json file will be downloaded open it with
-notepad<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>print(i)<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p align="center" class="MsoNormal" style="text-align: center;"><b><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">Prac7 Update<o:p></o:p></span></b></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">def
+query_op(query):<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">A.
-Tamper Data<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>tokens=query.lower().split()<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Steps:<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>print(tokens)<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1. Open Firefox browser
-and Search for "Add ons"<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2. Go to Firefox addons
-website<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>for vector in vector_matrix:<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>3. Search for
-"Tamper Data for FF Quantum" and add the extension to firefox<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>mystring=""<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>4. Search for
-"EditThisCookie" and add the extension to firefox.<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for digit in vector:<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>5. Go to website
-"www.techpanda.org" and login using the credentials admin@gmail.com
-&amp;&amp; password2010<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>mystring +=str(digit)<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>6. Now go to
-Editthiscookie add-on and export the cookie (its the third button from right,
-looks like this([=&gt;))<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>string_list.append(int(mystring,2))<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>7. The Cookie will be
-copied to the clipboard paste it in the notepad.<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>8. Go to tamper data
-add-on &gt; click yes &gt; open new tab and go to
-"www.techpanda.org/index.php" <o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>print(string_list)<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>9. tamper data pop up
-will appear click ok<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>return(tokens)<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>10. if(you can see
-cookie section)<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{clcik
-ok &gt; again click ok &gt; again click ok &gt; now you will be able to login
-without entering the is &amp;&amp; pass }<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">def
+or_op():<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>11. else{<span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Click on add header and Add the name as
-"Cookie" and value as PHPSESSID=b70b30c4dfc5bdab5577ca08b0eb2cd5<span style="mso-spacerun: yes;">&nbsp; </span><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>cnt=0<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">you
-wil get these values from the cookies you have pasted on notepad<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>tokens=query_op("anthony brutus")<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">click
-ok a couple of time you will be loggedin}<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>for i in range(len(tokens)):<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for j in range(len(words)):<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">B.
-Cookie Manager<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if tokens[i] in words[j]:<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Steps:<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if cnt == 1:<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1. Open Firefox browser
-and Search for "Add ons"<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>secondindex=j<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2. Go to Firefox addons
-website<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>cnt=0<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>3. Search for
-"Cookie Manager by Rob W" and add the extension to firefox<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>print(bin(string_list[firstindex] | string_list[secondindex]))<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>4. Go to
-https://opensource-demo.orangehrmlive.com/web/index.php/auth/login<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>else:<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>5. Enter username and
-password as Admin &amp;&amp; admin123 and click enter.<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>cnt=1<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>6. Go to Cookie Manager
-Add on &gt; Open Cookie manager for Current page &gt; select the orangehmr
-cookie &gt; More action &gt;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>firstindex=j<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Export
-select cookies &gt; Export &gt; json file will be downloaded open it with
-notepad<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">def
+and_op():<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">===================================================================================================================<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>cnt=0<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">Pr8<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>tokens=query_op("anthony brutus")<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">A.
-SQL Injection<span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>for i in range(len(tokens)):<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Steps:<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for j in range(len(words)):<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1.<span style="mso-spacerun: yes;">&nbsp; </span>Launch Kali linux terminal and run the
-following commands<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if tokens[i] in words[j]:<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2.<span style="mso-spacerun: yes;">&nbsp; </span>sudo apt update<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if cnt == 1:<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>3.<span style="mso-spacerun: yes;">&nbsp; </span>sudo apt install -y apache2 mariadb-server
-mariadb-client php php-mysqli php-gd libapache2-mod-php<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>secondindex=j<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>4.<span style="mso-spacerun: yes;">&nbsp; </span>sudo apt install git<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>cnt=0<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>5.<span style="mso-spacerun: yes;">&nbsp; </span>wget
-https://raw.githubusercontent.com/IamCarron/DVWA-Script/main/Install-DVWA.sh<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>print(bin(string_list[firstindex] &amp; string_list[secondindex]))<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>6.<span style="mso-spacerun: yes;">&nbsp; </span>chmod +x Install-DVWA.sh<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>else:<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>7.<span style="mso-spacerun: yes;">&nbsp; </span>sudo ./Install-DVWA.sh<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>cnt=1<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>8.<span style="mso-spacerun: yes;">&nbsp; </span>open browser type in the url localhost/DVWA<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>firstindex=j<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>9.<span style="mso-spacerun: yes;">&nbsp; </span>credentials to login is admin &amp; password<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>10. go to third option
-Setup/Reset DB &gt; scroll down and reset the database<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">def
+not_and_op():<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>11. go to 4th last
-option DVWA Security and set security to low<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>cnt=0<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>12. go to SQL Injection
-and type<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>tokens=query_op("not anthony
+mercy")<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>a. 1<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>invertfirst=0<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>b. ' OR '' =
-'<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>invertsecond=0<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>c. ' UNION
-SELECT user, password FROM users-- (this is to get password md5 hashed)<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>if tokens[0]=="not":<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>d. 1 = 1<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>invertfirst=1<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>e. 1*<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>if tokens[2]=="not":<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>invertsecond=1<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">=====================================================================================================<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>print(invertfirst,inversecond)<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">Pr9<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>for i in range(len(tokens)):<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">Python
-Code:<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for j in range(len(words)):<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if tokens[i] in words[j]:<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">from
-pynput.keyboard import Key, Listener<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if cnt==1:<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">import
-logging<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>secondindex=j<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">log_dir
-= ""<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>cnt=0<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">logging.basicConfig(filename=(log_dir+"key_log.txt"),
-level=logging.DEBUG,<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if(invertfirst==1) and
+(invertsecond==1):<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">format='%(asctime)s:%(message)s:')<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>print(bin(~(string_list[firstindex])&amp; ~(string_list[secondindex])))<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">def
-on_press(key):<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if(invertfirst==1) and
+(invertsecond==0):<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>logging.info(str(key))<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>print(bin(~(string_list[firstindex])&amp; string_list[secondindex]))<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">with
-Listener(on_press=on_press) as listener:<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if(invertfirst==0) and
+(invertsecond==1):<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>listener.join()<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>print(bin(string_list[firstindex] &amp; ~(string_list[secondindex])))<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">======================================================================================================<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>else:<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">Pr10<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>cnt=1<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">A.
-MetaSploit<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>firstindex=j<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Steps:<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">or_op()<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1.<span style="mso-spacerun: yes;">&nbsp; </span>Download Kali from
-https://cdimage.kali.org/kali-2024.1/kali-linux-2024.1-virtualbox-amd64.7z and
-Extract the file.<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">and_op()<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2.<span style="mso-spacerun: yes;">&nbsp; </span>Open the
-"kali-linux-2024.1-virtualbox-amd64.vbox" file it has a blue icon<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">not_and_op()<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>3.<span style="mso-spacerun: yes;">&nbsp; </span>Kali will launch in Virtualbox Username and
-Password is kali &amp;&amp; kali<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>4.<span style="mso-spacerun: yes;">&nbsp; </span>Download MetaSploitable 2 from
-https://sourceforge.net/projects/metasploitable/files/Metasploitable2/ and
-Extract the Zip.<o:p></o:p></span></p>
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">Pr5b: Vector Space Model<o:p></o:p></span></b></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>5.<span style="mso-spacerun: yes;">&nbsp; </span>Watch these videos
-https://youtu.be/MY31DZiAPYA?si=C8efGCKmQoXsIh7q &amp;&amp;
-https://youtu.be/6y-xqGoY9MY?si=-6rPuUpyprtGNvsq<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">import
+nltk<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>6.<span style="mso-spacerun: yes;">&nbsp; </span>Now both the machies should be on the same
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">from
+sklearn.feature_extraction.text import TfidfVectorizer<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">from
+sklearn.metrics.pairwise import cosine_similarity<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">documents
+= [<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>"The quick brown fox jumps over the
+lazy dog.",<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>"A brown dog chased the fox.",<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>"The dog is lazy."<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">]<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">query
+= "brown dog"<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">from
+nltk.tokenize import word_tokenize<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">tokenized_documents
+= [word_tokenize(doc.lower()) for doc in documents]<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">tokenized_query
+= word_tokenize(query.lower())<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">preprocessed_documents
+= [' '.join(doc) for doc in tokenized_documents]<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">preprocessed_query
+= ' '.join(tokenized_query)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">tfidf_vectorizer
+= TfidfVectorizer()<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">tfidf_matrix
+= tfidf_vectorizer.fit_transform(preprocessed_documents)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">print(tfidf_vectorizer.vocabulary_)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">print(tfidf_matrix)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">query_vector
+= tfidf_vectorizer.transform([preprocessed_query])<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">cosine_similarities
+= cosine_similarity(query_vector, tfidf_matrix)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">results
+= [(documents[i], cosine_similarities[0][i]) for i in range(len(documents))]<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">results.sort(key=lambda
+x: x[1], reverse=True)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">for
+doc, similarity in results:<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>print(f"Similarity:
+{similarity:.2f}\n{doc}\n")<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">Pr6: Clustering Algorithms<o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">import
+numpy as np<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">from
+sklearn.cluster import KMeans<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">from
+sklearn.feature_extraction.text import TfidfVectorizer<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">import
+seaborn as sns<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">import
+matplotlib.pyplot as plt<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">from
+sklearn.metrics import silhouette_score<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">dataset
+= [<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>"I love playing football on the
+weekends",<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>"I enjoy hiking and camping in the
+mountain",<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>"I like to read books and watch
+movies",<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>"I prefer playing video games over
+sports",<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>"I love listening to music and going
+to concerts"<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">]<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">vectorizer
+= TfidfVectorizer()<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">X
+= vectorizer.fit_transform(dataset)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">k
+= 2<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">km
+= KMeans(n_clusters=k, n_init=10)<span style="mso-spacerun: yes;">&nbsp; </span><o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">km.fit(X)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">y_pred
+= km.predict(X)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">print('Cluster
+assignments:', y_pred)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">print('Silhouette
+score of the model:', silhouette_score(X, y_pred))<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">X
+= X.toarray()<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">sns.scatterplot(x=X[:,0],
+y=X[:,5], hue=y_pred, palette='rainbow')<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">plt.show()<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">Pr7: Text Categorization<o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">import
+numpy as nm<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">import
+matplotlib.pyplot as mtp<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">from
+sklearn.datasets import load_iris<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">iris
+= load_iris()<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">X
+= iris.data<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">Y
+= iris.target<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">print(X)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">print(Y)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">from
+sklearn.model_selection import train_test_split<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">X_train,X_test,Y_train,Y_test
+= train_test_split(X, Y, test_size=0.4,random_state=1)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">from
+sklearn.naive_bayes import GaussianNB<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">gnb
+= GaussianNB()<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">gnb.fit(X_train,
+Y_train)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">Y_pred
+= gnb.predict(X_test)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">print(Y_pred)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">from
+sklearn import metrics<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">print("Gaussian
+Naives Bayes model accuracy(in
+%):",metrics.accuracy_score(Y_test,Y_pred)*100)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">Pr8a: Text summarization algorithm<o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">import
+nltk<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">import
+heapq<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">text
+= '''Introduction<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">Trees,
+those silent giants that populate our landscapes, have always been an integral
+part of our natural world.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">They
+provide us with oxygen, shade on a hot summer day, and a refuge for countless
+creatures.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">Yet,
+beyond their physical presence, trees have a secret life that is truly
+fascinating.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">One
+of the most intriguing aspects of their existence is their ability to
+communicate with each other and form intricate networks beneath the soil.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">In
+this article, we'll delve into this extraordinary fact about trees – their
+ability to communicate and share vital information with their neighbors.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">The
+Wood Wide Web<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">Imagine
+a vast underground network, similar to the World Wide Web, but made of roots
+and fungi.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">This
+is what scientists have aptly named the "Wood Wide Web." This underground
+system enables trees to exchange a wealth of information,<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">such
+as warnings about pests and diseases, sharing nutrients, and even sending
+distress signals during times of danger.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">The
+Mycorrhizal Connection<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">At
+the heart of the Wood Wide Web are mycorrhizal fungi, which have a symbiotic
+relationship with trees.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">These
+fungi attach themselves to the tree's roots and extend their thread-like
+structures, known as hyphae, far and wide through the soil.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">This
+intricate network of hyphae connects multiple trees, forming a mycorrhizal
 network.<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>7.<span style="mso-spacerun: yes;">&nbsp; </span>Launch both the machines and open terminal in
-kali; keep them side by side<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>8.<span style="mso-spacerun: yes;">&nbsp; </span>On metasploitable 2 enter the commanipd
-"ipconfig" and take note of ip address under eth0 &gt; inet<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">Sharing
+Nutrients<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>9.<span style="mso-spacerun: yes;">&nbsp; </span>On kali terminal ping matasploitable 2 using
-ping command "ping &lt;ip_addresss&gt;"<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>10. Press CTRL + C to
-stop the ping ; if the ping is successful we can proceed.<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">One
+of the most remarkable aspects of this tree communication system is the sharing
+of nutrients.<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>11. On kali run the
-following commands,<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">Trees,
+through their roots, provide sugars and carbohydrates to the fungi. In return,
+the fungi scavenge the soil for essential nutrients,<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>a.
-nmap -sV -O &lt;ip_addresss&gt;<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>Note:
--O(Capital O not 0)<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">such
+as phosphorus and nitrogen, which are often scarce. The fungi then transport
+these nutrients back to the trees, ensuring their mutual<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>b.
-msfconcole<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">survival.<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>c.
-search type:exploit vsftpd<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>d.
-use exploit/unix/ftp/vsftpd_234_backdoor<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">Warning
+Signals<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>e.
-show options<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>f.
-set RHOSTS 10.0.2.4<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">When
+a tree is under attack by insects or disease, it can release chemical signals
+into the air and soil.<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>g.
-exploit<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">These
+signals are picked up by neighboring trees through their roots and can trigger
+a defensive response.<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>h.
-ls -l<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">For
+example, when a tree is infested with aphids, it can release chemicals that
+repel aphids or attract predators of aphids.<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>i.
-cat /etc/shadow<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">This
+warning system can help neighboring trees prepare for an impending threat.<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">Sharing
+Resources In a dense forest, where trees compete for sunlight, the Wood Wide
+Web allows for a form of cooperation. Larger,<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-size: 14pt; line-height: 107%;">============================================================================================================<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">older
+trees with more access to sunlight can share some of their energy with smaller,
+shaded trees.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">This
+cooperative behavior ensures the survival of the entire forest ecosystem.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">Conclusion<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">The
+fact that trees communicate with each other through the Wood Wide Web is not
+only fascinating but also a testament to the interconnectedness<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">of
+life on Earth. It highlights the complexity of ecosystems and the importance of
+preserving our forests. Understanding this hidden world of tree<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">communication
+can lead to more sustainable forestry practices and a deeper appreciation for
+the remarkable lives of these silent giants. The next<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">time
+you walk through a forest, take a moment to marvel at the incredible network of
+communication happening beneath your feet, where trees share<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">their
+secrets and support one another in the silent language of nature.'''<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">stopwords
+= nltk.corpus.stopwords.words('english')<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">sentence_list
+= nltk.sent_tokenize(text)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">frequency_map={}<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">word_list=
+nltk.word_tokenize(text)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">for
+i in word_list:<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>if i not in stopwords:<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if i not in frequency_map:<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>frequency_map[i]=1<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>else:<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>frequency_map[i] +=1<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">max_frequency
+= max(frequency_map.values())<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">for
+word in frequency_map:<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>frequency_map[word]=
+frequency_map[word]/max_frequency<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>sent_score={}<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">for
+sent in sentence_list:<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>for word in word_list:<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if word in frequency_map and
+len(sent.split(' ')) &lt; 35:<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if sent not in sent_score:<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>sent_score[sent]=frequency_map[word]<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>else:<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>sent_score[sent] +=
+frequency_map[word]<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">summary
+= heapq.nlargest(10, sent_score, key= sent_score.get)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">for
+a in summary:<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>print(a)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">Pr8b: Question Answering<o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">from
+txtai.embeddings import Embeddings<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">from
+txtai.pipeline import Extractor<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">embeddings=Embeddings({"path":"sentence-transformers/paraphrase-MiniLM-L6-v2"})<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">extractor
+= Extractor(embeddings, "distilbert-base-cased-distilled-squad")<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">Data=
+[<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>"Australis is the only country that is
+also a continent.",<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>"The Great Barrier Reef is the world's
+larget living structure and can be seen from space.",<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>"Australia is home to a variety of
+unique wildlife, including kangaroos, koalas and platypuses.",<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>"The world's oldest known civilization
+, the Aboriginal culture, is believed to have originated in Australia around
+50,000 years ago."<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>"Australia is famous for its large
+number of deadly animals, such as snakes, spiders, and marine creatures.",<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>"The Australian Alps, or Snowy
+Mountains, receive more snowfall than Switzerland."<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>"Australia has over 10,000 beaches,
+more than any other country.",<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>"The Outback, a vast, remote area of
+Australia, covers most of the country's landmass.",<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>"Australia has a large area of
+vineyards and is known for producing high-quality wines.",<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>"Opera House, an iconic building and
+unesco World Heritage Site, is in Sydney."<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>]<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">question="Where
+is Opera House in Australia?"<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">print(extractor([(question,
+question, question, False)], Data))<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">Pr9: SVM<o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">from
+sklearn.datasets import load_svmlight_file<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">from
+sklearn.svm import SVC<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">from
+sklearn.metrics import ndcg_score<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">X_train,
+y_train = load_svmlight_file("training_data.txt")<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">rank_svm
+= SVC(kernel='linear')<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">rank_svm.fit(X_train,
+y_train)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">X_test,
+y_test = load_svmlight_file("test_data.txt")<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">rankings
+= rank_svm.predict(X_test)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">ndcg
+= ndcg_score(y_test.reshape(1, -1), rankings.reshape(1, -1))<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">print("NDCG
+Score:", ndcg)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">Pr10: Webcrawler<o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">import
+requests<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">from
+bs4 import BeautifulSoup<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">from
+urllib.parse import urljoin<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">import
+time<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">def
+fetch_links(url):<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>response = requests.get(url)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>if response.status_code == 200:<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>soup = BeautifulSoup(response.content,
+'html.parser')<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>return [urljoin(url, link['href']) for
+link in soup.find_all('a', href=True)]<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>return []<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">def
+crawl(start_url, max_pages=10):<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>visited, queue = set(), [start_url]<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>while queue and len(visited) &lt;
+max_pages:<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>url = queue.pop(0)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if url not in visited:<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>links = fetch_links(url)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>visited.add(url)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>queue.extend(link for link in links
+if link not in visited and link not in queue)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>time.sleep(1)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>return visited<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">start_url
+= 'http://www.google.com'<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">max_pages
+= 10<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">visited_pages
+= crawl(start_url, max_pages)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">print("Visited
+pages:")<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;">for
+page in visited_pages:<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>print(page)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 13.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p><br /><p></p>
