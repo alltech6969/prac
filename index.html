@@ -1,5 +1,196 @@
- <pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; background-color: white; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; font-size: 14px; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-align: start; text-wrap: wrap; user-select: text;">IR prac 
+ <pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; background-color: white; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; font-size: 20px; font-weight: 600; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-align: start; text-wrap: wrap; user-select: text;">IR prac 
 CC
 Prac 1,2,3,6
 https://drive.google.com/file/d/1GWSTzBMQRW-E5zeNzC4f2BYMDCmeerFo/view?usp=sharinga
+=================================================================================================================================================================================================================================
+prac 3 steps
+step 1 
+new project -&gt; java web -&gt; web application -&gt; give project name -&gt; next 
+
+step 2
+right click on project name -&gt; new -&gt; RESTful web service from pattern -&gt; give resource package name(StringOperationPackage) -&gt; write classname(StringOperation) -&gt; select MIME type(text/html) -&gt; finish
+
+step 3
+
+StringOperation.java
+@PUT
+@Consumes("text/html")
+@Path("/uppercase")
+public String toUpperCase(String a) {
+        return a.toUpperCase();
+}
+@PUT
+@Consumes("text/html")
+@Path("/lowercase")
+public String toLowerCase(String a) {
+        return a.toLowerCase();
+}
+
+step 4
+Click on project name -&gt; clean and build -&gt; deploy
+
+step 5
+Click on RESTfull web services -&gt; right click -&gt; test RESTfull web services
+
+step 6
+Goto file -&gt; new project -&gt; java -&gt; java application -&gt; give project name(ProjectName_Client) -&gt; finish
+
+step 7
+Click on created client project -&gt; new -&gt; RESTful java client(if RESTful java client is not visible select others goto web service there you will found “RESTful java client” ) -&gt; Give class name(StringOperationClient) -&gt; give package name (StringPackage) -&gt; Click on browse -&gt; select your project created in 1st step -&gt; select StringOperation[generic] -&gt; finish
+
+Step 8
+
+Write the below code inside 
+ProjectName_Client.java
+StringOperationClient client = new StringOperationClient();
+System.out.println(client.toLowerCase("PRIYANSHU"));
+System.out.println(client.toUpperCase("priyanshu"));
+
+Step 9
+Click on StringOperation -&gt; alt + enter -&gt; import the package
+
+Step 10
+Right click on ProjectName_Client.java -&gt; run the code
+
+=================================================================================================================================================================================================================================
+
+Practical No. 5 
+Aim: Installation and Configuration of virtualization using KVM. 
+1.	Download Ubuntu 22.04 image from https://www.osboxes.org/ubuntu/#ubuntu-22-04jammy-vbox 
+2.	Launch the image in Virtual box. 
+3.	Launch Terminal and execute the following code. 
+4.	Update and Upgrade Ubuntu 22.04  sudo apt update  sudo apt upgrade  
+5.	Check if Virtualization is enabled  egrep -c '(vmx|svm)' /proc/cpuinfo  
+6.	Install the cpu-checker package  sudo apt install -y cpu-checker  
+7.	verify if KVM virtualization is enabled  kvm-ok  
+8.	Install KVM on Ubuntu 22.04  sudo apt install -y qemu-kvm virt-manager libvirt-daemon-system virtinst libvirtclients bridge-utils  
+9.	Enable the virtualization daemon  sudo systemctl enable --now libvirtd sudo systemctl start libvirtd  
+10.	Check virtualization daemon is running  sudo systemctl status libvirtd  
+11.	Add Your User to the KVM and Libvirt Group  sudo usermod -aG kvm $USER  sudo usermod -aG libvirt $USER 
+12.	Restart the machine. 
+13.	Search for Virtual Machine manager and launch it. 
+=================================================================================================================================================================================================================================
+
+Practical No. 7
+Aim: Implement FOSS-Cloud Functionality VSI (Virtual Server Infrastructure) Infrastructure as a Service (IaaS), Storage. 
+Steps: 
+Install FOSS-Cloud on VM 
+1.	Download FOSS ISO file from https://sourceforge.net/projects/fosscloud/ 
+2.	Create a virtual machine with 5GB of RAM,150GB Disk space and VT-x enabled. 
+3.	Turn on the virtual machine and boot into FOSS installation setup using iso file. 
+4.	Select the first option that is “default boot option”. 
+5.	Type yes to start the installation. 
+6.	Select Node type as 1. Demo-System. 
+7.	Select the disk usually its “sda”. 
+8.	Type yes and enter(this will wipe the data on the disk) 
+9.	Enter the available ethernet device name. 
+10.	Type yes to enable DHCP. 
+11.	Type yes to allow the system to reboot. 
+12.	Login using the credentials provided. 
+13.	Enter the following command to configure the server “fc-nodeconfiguration -n demo-system –password admin”. 
+14.	Type the ifconfig command to get the ip address of the FOSS Server. 
+15.	Launch any browser on any other machine and enter the ip address. 
+16.	Login using the provided credentials. 
+17.	Install virt-viewer and spice client on your machine 
+18.	Press windows + R and type regedit. 
+19.	Goto HKEY_CLASSES_ROOT -&gt; spice -&gt; shell -&gt; open -&gt; command 
+20.	Goto this path C:/Users/Admin/AppData/Local/virt-viewer/bin/remoteviewer 
+21.	Come back to command right click in Default &gt; edit and paste the path 
+“C:/Users/Admin/AppData/Local/virt-viewer/bin/remote-viewer %1” 
+Creating a Virtual Machine 
+1.	Virtual Machine &gt; Profile &gt; Upload ISO File 
+2.	Choose File &gt; Give it a name &gt; click on Upload 
+3.	Virtual Machine &gt; Profile &gt; Create 
+4.	BaseProfile &gt; windows &gt; x86 &gt; en-US &gt; select the ISO file &gt; give VM the name &gt; 2GB ram &gt; 10GB storage &gt; 1CPU &gt; localtime &gt; Create button. 
+Creating VM template 
+1.	Virtual Machine &gt; VM templates &gt; create  
+2.	Keeps things default choose vmpool and no. of displays as 1. 
+3.	Click create 
+4.	Click Run button in Run Action button(VM status will change to running) 
+5.	Click on display(4th from left) under action section 
+Using VM 
+1.	Click &gt; Try Ubuntu. 
+2.	Run Ubuntu on Cloud. 
+
+=================================================================================================================================================================================================================================
+
+Practical No. 8
+Aim: Implement FOSS-Cloud Functionality – VSI Platform as a Service (PaaS) 
+Install FOSS-Cloud on VM 
+1.	Download FOSS ISO file from https://sourceforge.net/projects/fosscloud/ 
+2.	Create a virtual machine with 5GB of RAM,150GB Disk space and VT-x enabled. 
+3.	Turn on the virtual machine and boot into FOSS installation setup using iso file. 
+4.	Select the first option that is “default boot option”. 
+5.	Type yes to start the installation. 
+6.	Select Node type as 1. Demo-System. 
+7.	Select the disk usually its “sda”. 
+8.	Type yes and enter(this will wipe the data on the disk) 
+9.	Enter the available ethernet device name. 
+10.	Type yes to enable DHCP. 
+11.	Type yes to allow the system to reboot. 
+12.	Login using the credentials provided. 
+13.	Enter the following command to configure the server “fc-nodeconfiguration -n demo-system –password admin”. 
+14.	Type the ifconfig command to get the ip address of the FOSS Server. 
+15.	Launch any browser on any other machine and enter the ip address. 
+16.	Login using the provided credentials. 
+17.	Install virt-viewer and spice client on your machine 
+18.	Press windows + R and type regedit. 
+19.	Goto HKEY_CLASSES_ROOT -&gt; spice -&gt; shell -&gt; open -&gt; command 
+20.	Goto this path C:/Users/Admin/AppData/Local/virt-viewer/bin/remoteviewer 
+21.	Come back to command right click in Default &gt; edit and paste the path 
+“C:/Users/Admin/AppData/Local/virt-viewer/bin/remote-viewer %1” 
+Creating a Virtual Machine 
+1.	Virtual Machine &gt; Profile &gt; Upload ISO File 
+2.	Choose File &gt; Give it a name &gt; click on Upload 
+3.	Virtual Machine &gt; Profile &gt; Create 
+4.	BaseProfile &gt; windows &gt; x86 &gt; en-US &gt; select the ISO file &gt; give VM the name &gt; 2GB ram &gt; 10GB storage &gt; 1CPU &gt; localtime &gt; Create button. 
+Creating VM template 
+1.	Virtual Machine &gt; VM templates &gt; create  
+2.	Keeps things default choose vmpool and no. of displays as 1. 
+3.	Click create 
+4.	Click Run button in Run Action button(VM status will change to running) 
+5.	Click on display(4th from left) under action section 
+Using VM 
+1.	Click &gt; Try Ubuntu. 
+2.	Run Ubuntu on Cloud. 
+
+================================================================================================================================================================================================================================= 
+Practical No. 9
+Aim: Using AWS Flow Framework develop application that includes a simple workflow. Workflow calls an activity to print hello world to the console. It must define the basic usage of AWS Flow Framework, including defining contracts, implementation of activities and workflow coordination logic and worker programs to host them 
+ 	 
+=================================================================================================================================================================================================================================
+
+Practical No. 10 
+Aim: Implementation of Openstack with user and private network creation. 
+Steps: 
+Note: The commands are underlined. 
+1.	Download Ubuntu 22.04 image from https://www.osboxes.org/ubuntu/#ubuntu-22-04jammy-vbox 
+2.	Launch the image in Virtual box. 
+3.	Launch Terminal and execute the following code. 
+4.	sudo useradd -s /bin/bash -d /opt/stack -m stack 
+This code will create a new user stack with its home directory being /opt/stack 
+5.	sudo chmod +x /opt/stack 
+Adding execute permission to /opt/stack 
+6.	echo "stack ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/stack 
+7.	sudo -u stack -i the commands 6 &amp; 7 makes sure that stack user has sudo previlages and doesnot have to enter password again and again. 
+8.	git clone https://opendev.org/openstack/devstack 
+9.	cd devstack 
+Downloading devstack and changing directory to devstack 10.  Now we have create a file and add the following lines to it. 
+11.	nano local.conf  
+(this will create and open the local.conf file) type the whole text below in-it. 
+ [[local|localrc]] 
+ADMIN_PASSWORD=secret 
+DATABASE_PASSWORD=$ADMIN_PASSWORD 
+RABBIT_PASSWORD=$ADMIN_PASSWORD 
+SERVICE_PASSWORD=$ADMIN_PASSWORD 
+12.	After typing the whole test. Press “Ctrl + O” to save the file then click Enter to confirm the file name. 
+13.	Now press “Ctrl + X” to exit. 
+14.	./stack.sh 
+This command will start the install. 
+OR 
+Execute the below command in latest Ubuntu LTS to install openstack. 1. sudo snap install openstack  
+2.	sunbeam prepare-node-script | bash -x &amp;&amp; newgrp snap_daemon  
+3.	sunbeam cluster bootstrap --accept-defaults  
+4.	sunbeam configure --accept-defaults --openrc demo-openrc  
+5.	sunbeam launch ubuntu -n test 
 </pre>
