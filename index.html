@@ -298,4 +298,58 @@ Steps:
 	5.	sunbeam launch ubuntu -n test
 
 
+=========================================================================================== 
+
+Sum of two numbers:
+Step1 
+Create project -> java -> web application -> give name(AddOperation) -> next -> next -> finish
+
+Step 2
+Right click on project name   -> new -> web service ->  give name(Addition) and package name(AdditionPackage) -> finish
+
+Step 3
+Paste the below code in Addition.java
+
+@WebMethod(operationName = "Sum")
+public String Sum(@WebParam(name = "a") int a, @WebParam(name = "b") int b) {
+return "sum of a and b = " + (a+b);
+ }
+
+Step 4
+Click on project name -> clean and build 
+Click on project name -> deploy
+Goto  -> web service -> Addition.java -> right click -> test web service 
+
+
+=========================================================================================== 
+
+Factorial 
+Step1 
+Create project -> java -> web application -> give name(AddOperation) -> next -> next -> finish
+Step 2
+Right click on project name   -> new -> web service ->  give name(FactorialofNumber) and package name(FactorialPackage) -> finish
+
+Step 3
+Paste the below code in FactorialofNumber.java
+
+@WebMethod(operationName = "Factorial")
+    public String Factorial(@WebParam(name = "a") int a) {
+          if (a < 0) {
+        return "Factorial is not defined for negative numbers.";
+    } else if (a == 0 || a == 1) {
+        return "1";
+    } else {
+        int result = 1;
+        for (int i = 2; i <= a; i++) {
+            result *= i;
+        }
+        return "factorial = " + result;
+    }
+    }
+
+Step 4
+Click on project name -> clean and build 
+Click on project name -> deploy
+Goto  -> web service -> Addition.java -> right click -> test web service 
+
 </pre>
