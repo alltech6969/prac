@@ -1,355 +1,648 @@
  <pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; background-color: white; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; font-size: 16px; font-weight: 600; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-align: start; text-wrap: wrap; user-select: text;">CC
-Prac 1,2,3,6
-https://drive.google.com/file/d/1GWSTzBMQRW-E5zeNzC4f2BYMDCmeerFo/view?usp=sharinga
-=================================================================================================================================================================================================================================
+Practical 1 (MS Excel):
 
-Prac1 ASP.NET
-Create new project -&gt; search for ASP.NET web application(.NET framework) -&gt; select it -&gt;next -&gt; give project name -&gt; select framework 4.7.2 -&gt; select empty  -&gt; create
+1.Conditional Formatting
+	1.Highlight Cells
+	2.Top/Bottom Rules (Average->Below/Above)
+	3.Data bars
+	4.Color sets
+	5.Icon sets
+	6.Duplicate values (New rule -> 2nd last option(only unique or...)->strikethrough)
+2.Pivot the file
+	1.Drag and drop product in row labels -> amount in values -> dropdown option -> value field settings -> count
+	2.Drag and drop category in column labels
+	3.Drag and drop country in report labels
+	4.Sort => select cell -> right click -> sort -> smallest to largest or largest to smallest
+	5.Pivot table chart 2d column:
+		Amount-> Value
+		Product-> Axis
+		Country-> Filter
+		Category-> Legend
 
-Right click on project name in solution explorer -&gt; Add -&gt; new item -&gt;  search for web service(ASMX) -&gt; select it -&gt; Add
-
-Add below code to WebService1.asmx.cs
-public class WebService1 : System.Web.Services.WebService
- {
-
-     [WebMethod]
-     public double D2R(double dollar)
-     {
-         double ans = dollar * 82;
-         return ans;
-     }
-
-     [WebMethod]
-     public double R2D(double rupees)
-     {
-         double ans = rupees / 82;
-         return rupees;
-     }
- }
-
-Click on project name -&gt; right click -&gt; clean
-Click on project name -&gt; right click -&gt; Build
-Select WebService1.asmx inside solution explorer -&gt; right click -&gt; view in browser -&gt; test the services
-
-=================================================================================================================================================================================================================================
-
-Pr1 &amp;&amp; Pr2
-A. WebService &amp; SOAP Service
-	Steps:
-		1.  Create a new webapplication File &gt; New project &gt; Java web &gt; web application 
-		2.  Right click on the project &gt; New &gt; web services (Name: currency &amp;&amp; package: server)
-		3.  delete the "hello()" method
-		4.  go to design tab and click on add operations
-		5.  Fill the values(Name: INRtoUSD; return_type: String; Parameter: name: a; Type: Double)
-			and click on OK
-		6.  go to source tab and Change "return null;" to "return "the conversion from INR to USD is " + (a/85);"
-		7.  Right click on the project Clean and Build
-		8.  Right click on the project Deploy
-		9.  Right click on Currency under web services and click Test Web Services
-		10. the project will launch in a browser enter the value and click the button
-		11. Right click on Project &gt; New &gt; jsp (create 2 .jsp pages input &amp;&amp; output)
-		12. in input.jsp enter the following code in body</pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; background-color: white; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; font-size: 16px; font-weight: 600; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-align: start; text-wrap: wrap; user-select: text;"><br /></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; background-color: white; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; font-size: 16px; font-weight: 600; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-align: start; text-wrap: wrap; user-select: text;"><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span>&lt;form action="output.jsp"&gt;</pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; background-color: white; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; font-size: 16px; font-weight: 600; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-align: start; text-wrap: wrap; user-select: text;">		<span>&nbsp;&nbsp; &nbsp;</span>&lt;pre&gt;Enter the value in INR: </pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; background-color: white; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; font-size: 16px; font-weight: 600; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-align: start; text-wrap: wrap; user-select: text;"><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span>&lt;input type="text" name="t1"&gt;
-		<span>&nbsp;&nbsp; &nbsp;</span>&lt;input type="submit"&gt;</pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; background-color: white; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; font-size: 16px; font-weight: 600; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-align: start; text-wrap: wrap; user-select: text;"><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span>&lt;input type="reset"&gt;
-		<span>&nbsp;&nbsp; &nbsp;</span>&lt;/pre&gt;
-		&lt;/form&gt;</pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; background-color: white; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; font-size: 16px; font-weight: 600; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-align: start; text-wrap: wrap; user-select: text;">     
-		13. Right Click on Project &gt; New &gt; Web Service Client &gt; Browse &gt; Expand your Project &gt; 
-			select Currency &gt; Give package name : "client" &gt; Click OK
-		14. Expand the Web Service References &gt; Currency &gt; currency &gt; Currencyport (use should be seeing INRtoUSD)
-		15. Open Output.jsp and delete everything under its <body> </body>
-		16. Drag INRtoUSD from step 14 and drop it in between the body of output.jsp
-		17. make the following changes
-			double = 0.0d; &gt; double a = Double.parseDouble(request.getParameter("t1"));
-			out.println("Result = "+result); &gt; out.println(result);
-		18. go to input.jsp file right click &gt; run file.
-=================================================================================================================================================================================================================================
-
-prac 3 steps
-step 1 
-new project -&gt; java web -&gt; web application -&gt; give project name -&gt; next 
-step 2
-right click on project name -&gt; new -&gt; RESTful web service from pattern -&gt; give resource package name(StringOperationPackage) -&gt; write classname(StringOperation) -&gt; select MIME type(text/html) -&gt; finish
-step 3
-StringOperation.java
-@PUT
-@Consumes("text/html")
-@Path("/uppercase")
-public String toUpperCase(String a) {
-        return a.toUpperCase();
-}
-@PUT
-@Consumes("text/html")
-@Path("/lowercase")
-public String toLowerCase(String a) {
-        return a.toLowerCase();
-}
-
-step 4
-Click on project name -&gt; clean and build -&gt; deploy
-step 5
-Click on RESTfull web services -&gt; right click -&gt; test RESTfull web services
-step 6
-Goto file -&gt; new project -&gt; java -&gt; java application -&gt; give project name(ProjectName_Client) -&gt; finish
-step 7
-Click on created client project -&gt; new -&gt; RESTful java client(if RESTful java client is not visible select others goto web service there you will found “RESTful java client” ) -&gt; Give class name(StringOperationClient) -&gt; give package name (StringPackage) -&gt; Click on browse -&gt; select your project created in 1st step -&gt; select StringOperation[generic] -&gt; finish
-Step 8
-Write the below code inside 
-ProjectName_Client.java
-StringOperationClient client = new StringOperationClient();
-System.out.println(client.toLowerCase("PRIYANSHU"));
-System.out.println(client.toUpperCase("priyanshu"));
-
-Step 9
-Click on StringOperation -&gt; alt + enter -&gt; import the package
-Step 10
-Right click on ProjectName_Client.java -&gt; run the code
-
-=================================================================================================================================================================================================================================
-
-
-Pr 5: KVM
-
-Steps:
-	1. 	Go to CC_ISO's Extract the Ubuntu 22.04 Zip and double click the blue(.vbox) file 
-	2.	Launch the image in Virtual box.
-	3.	Launch Terminal and execute the following code.
-	4.	Update and Upgrade Ubuntu 22.04 
-		sudo apt update 
-		sudo apt upgrade 
-	5.	Check if Virtualization is enabled 
-		egrep -c '(vmx|svm)' /proc/cpuinfo 
-	6.	Install the cpu-checker package 
-		sudo apt install -y cpu-checker 
-	7.	verify if KVM virtualization is enabled 
-		kvm-ok 
-	8.	Install KVM on Ubuntu 22.04 
-		sudo apt install -y qemu-kvm virt-manager libvirt-daemon-system virtinst libvirt-clients bridge-utils 
-	9.	Enable the virtualization daemon 
-		sudo systemctl enable --now libvirtd sudo systemctl start libvirtd 
-	10.	Check virtualization daemon is running 
-		sudo systemctl status libvirtd 
-	11.	Add Your User to the KVM and Libvirt Group 
-		sudo usermod -aG kvm $USER 
-		sudo usermod -aG libvirt $USER
-	12.	Restart the machine.
-	13.	Search for Virtual Machine manager and launch it.
-
-=====================================================================================
-
-Pr 6: MTOM
-
-Steps:
-	1. Open Visual Studio
-	2. Create a New Project &gt; ASP.NET Web Application (c# wala not VB script)
-	3. Give it a name &gt; click create &gt; click create
-	4. Add new Web Service (Project &gt; Add New Item &gt; Show All Templates &gt; Web Service(ASMX))
-	5. Give Name to web service Name : ImageDownloadWebService.asmx
-	6. Click Add
-	7. in the opened file add the code below HelloWorld() method
-		[WebMethod, Description("Get Image Content")]
-		public byte[] GetImageFile(String fileName)
-		{
-			string filePath = Server.MapPath("~/Images/") + fileName;
-
-			if(System.IO.File.Exists(filePath))
-			{
-				return System.IO.File.ReadAllBytes(filePath);
-			}
-			else
-			{
-				return new byte[] { 0 };
-			}
-		}
-	
-	8. Add a new Generic Handler (Project &gt; Add New Item &gt; Generic Handler)
-	9. Give Name : ImageHandler.ashx
-	10. Modify the following code on the opened file.
-		public void ProcessRequest(HttpContext context)
-		{
-			ImageDownloadWebService imageDownloadWebService = new ImageDownloadWebService();
-
-			byte[] binaryImage = imageDownloadWebService.GetImageFile(context.Request["fileName"]);
-
-			if(binaryImage.Length == 1)
-			{
-				//no content, do nothing
-			}
-			else 
-			{
-				context.Response.ContentType = "image/jpeg";
-
-				context.Response.BinaryWrite(binaryImage);
-			}
-		}
+3.VLookUP
+	1. within a sheet:
+		=vlookup(A5,A1:B6,2,)
+	2. betwwen two sheets:
+		=vlookup(A4,Sheet2!A2:B4,2,)
 		
-	11. Add a new WebForm(Project &gt; Add New Item &gt; Web Form)
-	12. Give Name: ImageDownloadWebForm.aspx
-	13. Add the following code in the form tag</pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; background-color: white; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; font-size: 16px; font-weight: 600; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-align: start; text-wrap: wrap; user-select: text;"><br /></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; background-color: white; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-align: start; user-select: text;"><span style="font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; font-size: 16px; font-weight: 600; text-wrap: wrap;">&nbsp;&nbsp; &nbsp;</span><span style="font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; font-size: 16px; font-weight: 600; text-wrap: wrap;">&nbsp;&nbsp; &nbsp;</span><span style="font-family: Courier New, Courier, monospace, arial, sans-serif;"><span style="font-size: 16px; text-wrap: wrap;"><b>&lt;center&gt;
-     <span>&nbsp;&nbsp; &nbsp;</span>&lt;asp:label borderstyle="Ridge" id="Label1" runat="server" text="Enter Image Name"&gt;&lt;/asp:label&gt;
-		&amp;nbsp;&amp;nbsp;
- <span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span>&lt;asp:textbox borderstyle="Groove" id="TextBox1" runat="server"&gt;&lt;/asp:textbox&gt;
-     <span>&nbsp;&nbsp; &nbsp;</span>&lt;br /&gt;				
-     <span>&nbsp;&nbsp; &nbsp;</span>&lt;br /&gt;
-     <span>&nbsp;&nbsp; &nbsp;</span>&lt;asp:button borderstyle="Ridge" id="Button1" onclick="Button1_Click" runat="server" text="Download &amp;amp; Show Image"&gt;&lt;/asp:button&gt;
- <span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span>&lt;br /&gt;
- <span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span>&lt;br /&gt;
- <span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span>&lt;asp:image id="Image1" runat="server"&gt;
- <span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span>&lt;/asp:image&gt;</b></span></span></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; background-color: white; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-align: start; user-select: text;"><span style="font-family: Courier New, Courier, monospace, arial, sans-serif;"><span style="font-size: 16px; text-wrap: wrap;"><b><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span>&lt;/center&gt;</b></span></span></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; background-color: white; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; font-size: 16px; font-weight: 600; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-align: start; text-wrap: wrap; user-select: text;">      	
-	14. Go to Design Tab by clicking on Design Button(Bottom Left Corner)
-	15. Double click on the download button and modify the following code
-		protected void Button1_Click(object sender, EventArgs e)
-		{
-			Image1.ImageUrl = "~/ImageHandler.ashx?fileName=" + TextBox1.Text;
+4.What-if analysis using gaol seek
+	1.select the cell to be changed
+	2.enter the target value
+	3.select cels which has to be changed
 
-			Response.Write("Image Download Completed");
-		}
+Practical 2 (R) :
 
-	16. Add a New Folder Name "Images" to the project (Project &gt; New Folder &gt; Give name) OR
-		(Right Click on Project Name on the right Panel &gt; Add &gt; New Folder &gt; give folder name)
-	17. Add a Random image to Folder (Copy the image &gt; Right click in Folder &gt; Paste)
-	18. To Open WebForm in a browser (WebForm &gt; Right Click &gt; View in Browser)
-	19. Give permission if asked click yes/next
-	20. If Browser Opens but page does not load copy the URL and paste it in Incognito tab.
-	21. Enter the name of your image with extension and click the button the image should be visible.
-======================================================================================
+A.Reading file
 
-Pr 7 &amp; 8: FOSS
-Steps:
-	Install FOSS-Cloud on VM
-		1.	Download FOSS ISO file from https://sourceforge.net/projects/foss-cloud/
-		2.	Create a virtual machine with 5GB of RAM,150GB Disk space and VT-x enabled.
-		3.	Turn on the virtual machine and boot into FOSS installation setup using iso file.
-		4.	Select the first option that is “default boot option”.
-		5.	Type yes to start the installation.
-		6.	Select Node type as 1. Demo-System.
-		7.	Select the disk usually its “sda”.
-		8.	Type yes and enter(this will wipe the data on the disk)
-		9.	Enter the available ethernet device name.
-		10.	Type yes to enable DHCP.
-		11.	Type yes to allow the system to reboot.
-		12.	Login using the credentials provided.
-		13.	Enter the following command to configure the server “fc-node-configuration -n demo-system –password admin”.
-		14.	Type the ifconfig command to get the ip address of the FOSS Server.
-		15.	Launch any browser on any other machine and enter the ip address.
-		16.	Login using the provided credentials.
-		17.	Install virt-viewer and spice client on your machine
-		18.	Press windows + R and type regedit.
-		19.	Goto HKEY_CLASSES_ROOT -&gt; spice -&gt; shell -&gt; open -&gt; command
-		20.	 Goto this path C:/Users/Admin/AppData/Local/virt-viewer/bin/remote-viewer
-		21.	Come back to command right click in Default &gt; edit and paste the path “C:/Users/Admin/AppData/Local/virt-viewer/bin/remote-viewer %1”
-	
-	Creating a Virtual Machine
-		1.	Virtual Machine &gt; Profile &gt; Upload ISO File
-		2.	Choose File &gt; Give it a name &gt; click on Upload
-		3.	Virtual Machine &gt; Profile &gt; Create
-		4.	BaseProfile &gt; windows &gt; x86 &gt; en-US &gt; select the ISO file &gt; give VM the name &gt; 2GB ram &gt; 10GB storage &gt; 1CPU &gt; localtime &gt; Create button.
-	
-	Creating VM template
-		1.	Virtual Machine &gt; VM templates &gt; create 
-		2.	Keeps things default choose vmpool and no. of displays as 1.
-		3.	Click create
-		4.	Click Run button in Run Action button(VM status will change to running)
-		5.	Click on display(4th from left) under action section
-	
-	Using VM
-		1.	Click &gt; Try Ubuntu.
-		2.	Run Ubuntu on Cloud.
+data = read.csv(file.choose())
+print(head(data())
 
-=========================================================================================== 
+library(rjson)
+data=fromJSON(file=file.choose())
+print(data)
 
-Pr 10: OpenStack
+B.Basic data pre-processing
 
-Steps:
-	1.	Go to CC_ISO's Extract the Ubuntu 22.04 Zip and double click the blue(.vbox) file 
-	2.	Launch the image in Virtual box.
-	3.	Launch Terminal and execute the following code.
-	4.	sudo useradd -s /bin/bash -d /opt/stack -m stack
-		This code will create a new user stack with its home directory being /opt/stack
-	5.	sudo chmod +x /opt/stack
-		Adding execute permission to /opt/stack
-	6.	echo "stack ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/stack
-	7.	sudo -u stack -i
-		the commands 6 &amp; 7 makes sure that stack user has sudo previlages and doesnot have to enter password again and again.
-	8.	git clone https://opendev.org/openstack/devstack
-	9.	cd devstack
-		Downloading devstack and changing directory to devstack
-	10.	 Now we have create a file and add the following lines to it.
-	11.	nano local.conf 
-		(this will create and open the local.conf file)
-		type the whole text below in-it.
-		
-		[[local|localrc]]
-		ADMIN_PASSWORD=secret
-		DATABASE_PASSWORD=$ADMIN_PASSWORD
-		RABBIT_PASSWORD=$ADMIN_PASSWORD
-		SERVICE_PASSWORD=$ADMIN_PASSWORD
-		
-	12.	After typing the whole test. Press “Ctrl + O” to save the file then click Enter to confirm the file name.
-	13.	Now press “Ctrl + X” to exit.
-	14.	./stack.sh
-		This command will start the install.
-	
-	OR
-	
-	Execute the below command in latest Ubuntu LTS to install openstack.
-	1.	sudo snap install openstack 
-	2.	sunbeam prepare-node-script | bash -x &amp;&amp; newgrp snap_daemon 
-	3.	sunbeam cluster bootstrap --accept-defaults 
-	4.	sunbeam configure --accept-defaults --openrc demo-openrc 
-	5.	sunbeam launch ubuntu -n test
+data = read.csv(file.choose())
+dim(data)
+variable_names=names(data)
+print(variable_names)
+str(data)
+
+colSums(is.na(data))
+column=c("Pclass")
+frequency = table(data&Pclass)
+print(frequency)
+node=names(frequency)[which.max(frequency)]
+print(node)
+data$Pclass[is.na(data%Pclass)]=3
+print(head(data))
+
+C.Manipulate and transform (filtering,sorting and grouping)
+
+install.packages("dplyr")
+library(dplyr)
+stats=data.frame(player=c('A','B','C','D'),runs=c(100,200,408,19),wickets=c(1,7,20,NA,5))
+print(stats)
+filter(stats,runs>100)
+
+stats=data.frame(player=c('A','B','C','D','A','A'),runs=c(100,200,408,19,56,100),wickets=c(1,7,20,NA,52,17))
+distinct(stats)
+unique(stats)
+distinct(stats,player,.keep_all=TRUE)
+
+stats=data.frame(player=c('A','B','C','D'),runs=c(100,200,408,19),wickets=c(1,7,20,NA,5))
+arrange(stats,runs)
+
+data_frame=data.frame(col1=sample(6:7,9,replace=TRUE),col2=letters[1:3],col3=c(1,4,5,1,NA,NA,2,NA,2))
+print(data_frame)
+
+data_frame%>%group_by(col1)
 
 
-=========================================================================================== 
+Practical 2 (Python) :
 
-Sum of two numbers:
-Step1 
-Create project -> java -> web application -> give name(AddOperation) -> next -> next -> finish
+A. Read data from CSV and JSON files into a data frame:
 
-Step 2
-Right click on project name   -> new -> web service ->  give name(Addition) and package name(AdditionPackage) -> finish
+# Read data from a csv file
+import pandas as pd
+df = pd.read_csv('Student_Marks.csv')
+print("Our dataset ")
+print(df)
 
-Step 3
-Paste the below code in Addition.java
+# Reading data from a JSON file
+import pandas as pd
+data = pd.read_json('dataset.json')
+print(data)
 
-@WebMethod(operationName = "Sum")
-public String Sum(@WebParam(name = "a") int a, @WebParam(name = "b") int b) {
-return "sum of a and b = " + (a+b);
- }
+B. Perform basic data pre-processing tasks such as handling missing values and outliers:
 
-Step 4
-Click on project name -> clean and build 
-Click on project name -> deploy
-Goto  -> web service -> Addition.java -> right click -> test web service 
+# Replacing NA values using fillna()
+import pandas as pd
+
+df = pd.read_csv('titanic.csv')
+print(df)
+df.head(10)
+print("Dataset after filling NA values with 0 : ")
+df2=df.fillna(value=0)
+print(df2)
+
+# Dropping NA values using dropna()
+import pandas as pd
+df = pd.read_csv('titanic.csv')
+print(df)
+df.head(10)
+print("Dataset after dropping NA values: ")
+df.dropna(inplace = True)
+print(df)
+
+C. Manipulate and transform data using functions like filtering, sorting, and grouping: 
+
+import pandas as pd
+# Load iris dataset
+iris = pd.read_csv('Iris.csv')
+# Filtering data based on a condition
+setosa = iris[iris['Species'] == 'setosa']
+print("Setosa samples:")
+print(setosa.head())
+# Sorting data
+sorted_iris = iris.sort_values(by='SepalLengthCm', ascending=False)
+print("\nSorted iris dataset:")
+
+print(sorted_iris.head())
+# Grouping data
+grouped_species = iris.groupby('Species').mean()
+print("\nMean measurements for each species:")
+print(grouped_species)
 
 
-=========================================================================================== 
+Practical 3 (R) :
 
-Factorial 
-Step1 
-Create project -> java -> web application -> give name(AddOperation) -> next -> next -> finish
-Step 2
-Right click on project name   -> new -> web service ->  give name(FactorialofNumber) and package name(FactorialPackage) -> finish
+A.Feature-scaling techniques like standardiztion and normaliztion
 
-Step 3
-Paste the below code in FactorialofNumber.java
+install.packages("dplyr")
+install.packages("caret")
+library(dplyr)
+library(caret)
 
-@WebMethod(operationName = "Factorial")
-    public String Factorial(@WebParam(name = "a") int a) {
-          if (a < 0) {
-        return "Factorial is not defined for negative numbers.";
-    } else if (a == 0 || a == 1) {
-        return "1";
-    } else {
-        int result = 1;
-        for (int i = 2; i <= a; i++) {
-            result *= i;
-        }
-        return "factorial = " + result;
-    }
-    }
+#housing.csv
+mydata=read.csv(file.choos())
+print(mydata)
 
-Step 4
-Click on project name -> clean and build 
-Click on project name -> deploy
-Goto  -> web service -> Addition.java -> right click -> test web service 
+#normalization using log
+processed_data=mydata
+processed_data=processed_data %>% mutate(price_log =log(processed_data$Price))
+print(processed_data)
 
+#normalization using scale
+processed_data=processed_data %>% mutate(price_scale =scale(processed_data$Price))
+print(processed_data)
+
+#normalization using z-score
+processed_data=mydata
+price_mean=mean(processed_data$Price)
+price_sd=sd(processed_data$Price)
+processed_data=processed_data%>%mutate(Price_zscore=(processed_data$Price-price_mean)/price_sd)
+print(processed_data)
+
+#standardiztion
+df = pre_process(processed_data, method=c("range"))
+processed_data = predict(df,as.data.frame(processed_data))
+print(processed_data)
+
+B. Feature dummification (categorical to numerical)
+
+str(PlantGrowth)
+head(PlantGrowth)
+tail(PlantGrowth)
+pg=PlantGrowth
+head(pg,20)
+pg$group_ctrl=ifelse(pg$group=='ctrl',1,0)
+head(pg,20)
+
+#using dummy cols
+install.packages("fastDummies")
+library(fastDummies)
+
+data=PlantGrowth
+data=dummy_cols(data,select_columns="group")
+print(data)
+
+
+Practical 3 (Python) :
+
+A. Apply feature-scaling techniques like standardization and normalization to numerical
+features:
+
+# Standardization and normalization
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.preprocessing import MinMaxScaler, StandardScaler
+df = pd.read_csv('wine.csv', header=None, usecols=[0, 1, 2], skiprows=1)
+df.columns = ['classlabel', 'Alcohol', 'Malic Acid']
+print("Original DataFrame:")
+print(df)
+scaling=MinMaxScaler()
+scaled_value=scaling.fit_transform(df[['Alcohol','Malic Acid']])
+df[['Alcohol','Malic Acid']]=scaled_value
+print("\n Dataframe after MinMax Scaling")
+print(df)
+scaling=StandardScaler()
+scaled_standardvalue=scaling.fit_transform(df[['Alcohol','Malic Acid']])
+df[['Alcohol','Malic Acid']]=scaled_standardvalue
+print("\n Dataframe after Standard Scaling")
+print(df)
+
+B. Perform feature Dummification to convert categorical variables into numerical representations:
+
+import pandas as pd
+iris=pd.read_csv("Iris.csv")
+print(iris)
+from sklearn.preprocessing import LabelEncoder
+le=LabelEncoder()
+iris['code']=le.fit_transform(iris.Species)
+print(iris)
+
+
+Practical 4:
+
+A. One sample T-test
+
+import numpy as np
+from scipy import stats
+marks = [90, 100, 80, 95, 92, 45]
+print("Marks:", marks)
+mean = np.mean(marks)
+print("Mean:", mean)
+t_test, p_val = stats.ttest_1samp(marks, 80)
+alpha = 0.05
+print("Null Hypothesis: The sample mean of marks is equal to 80.")
+print("Alternative Hypothesis: The sample mean of marks is not equal to 80.")
+if p_val < alpha:
+	print("Result:  Reject  the  null  hypothesis.  There  is  a significant   difference   between   the   sample   mean   and   the population mean (80).")
+else:
+	print("Result:  Accept  the  null  hypothesis.  There  is  no significant   difference   between   the   sample   mean   and   the population mean (80).")
+
+B. Two sample T-test
+
+import numpy as np
+from scipy import stats
+import matplotlib.pyplot as plt
+
+np.random.seed(42)
+sample1 = np.random.normal(loc=10, scale=2, size=30)
+sample2 = np.random.normal(loc=12, scale=2, size=30)
+
+t_statistic, p_value = stats.ttest_ind(sample1, sample2)
+
+alpha = 0.05
+print("Results of Two-Sample t-test:")
+print(f'T-statistic: {t_statistic}')
+print(f'P-value: {p_value}')
+print(f"Degrees of Freedom: {len(sample1) + len(sample2) - 2}")
+
+#for plotting
+plt.figure(figsize=(10, 6))
+plt.hist(sample1, alpha=0.5, label='Sample 1', color='blue')
+plt.hist(sample2, alpha=0.5, label='Sample 2', color='orange')
+plt.axvline(np.mean(sample1), color='blue', linestyle='dashed', linewidth=2)
+plt.axvline(np.mean(sample2), color='orange', linestyle='dashed', linewidth=2)
+plt.title('Distributions of Sample 1 and Sample 2')
+plt.xlabel('Values')
+plt.ylabel('Frequency')
+plt.legend()
+
+if p_value < alpha:
+    critical_region = np.linspace(min(sample1.min(), sample2.min()), max(sample1.max(),sample2.max()), 1000)
+    plt.fill_between(critical_region, 0, 5, color='red', alpha=0.3, label='Critical Region')
+    plt.text(11, 5, f'T-statistic: {t_statistic:.2f}', ha='center', va='center', color='black',backgroundcolor='white')
+
+plt.show()
+
+if p_value < alpha:
+    if np.mean(sample1) > np.mean(sample2):
+        print("Conclusion: There is significant evidence to reject the null hypothesis.")
+        print("Interpretation: The mean of Sample 1 is significantly higher than that of Sample2.")
+    else:
+        print("Conclusion: There is significant evidence to reject the null hypothesis.")
+        print("Interpretation: The mean of Sample 2 is significantly higher than that of Sample1.")
+else:
+    print("Conclusion: Fail to reject the null hypothesis.")
+    print("Interpretation: There is not enough evidence to claim a significant difference between the means.")
+
+C. chi-square test
+
+import pandas as pd
+import numpy as np
+import matplotlib as plt
+import seaborn as sb
+import warnings
+from scipy import stats
+warnings.filterwarnings('ignore')
+df=sb.load_dataset('mpg')
+print(df)
+print(df['horsepower'].describe())
+print(df['model_year'].describe())
+bins=[0,75,150,240]
+df['horsepower_new']=pd.cut(df['horsepower'],bins=bins,labels=['l','m','h'])
+c=df['horsepower_new']
+print(c)
+ybins=[69,72,74,84]
+label=['t1','t2','t3']
+df['modelyear_new']=pd.cut(df['model_year'],bins=ybins,labels=label)
+newyear=df['modelyear_new']
+print(newyear)
+df_chi=pd.crosstab(df['horsepower_new'],df['modelyear_new'])
+print(df_chi)
+stat,p_val,dof,expected=stats.chi2_contingency(df_chi)
+print("stat: ",stat)
+print("p_val: ",p_val)
+print("dof: ",dof)
+print("expected: ",expected)
+
+
+Practical 5 : Analysis of variance (ANOVA)
+
+import pandas as pd
+import scipy.stats as stats
+import numpy as np
+from statsmodels.stats.multicomp import pairwise_tukeyhsd
+group1 = [23, 25, 29, 34, 30]
+group2 = [19, 20, 22, 24, 25]
+group3 = [15, 18, 20, 21, 17]
+group4 = [28, 24, 26, 30, 29]
+
+m1=np.mean(group1)
+m2=np.mean(group2)
+m3=np.mean(group3)
+m4=np.mean(group4)
+print("Means: ",m1,m2,m3,m4)
+
+f_statistics, p_value = stats.f_oneway(group1, group2, group3, group4)
+print("one-way ANOVA:")
+print("F-statistics:", f_statistics)
+print("p-value", p_value)
+
+all_data = group1 + group2 + group3 + group4
+group_labels = ['Group1'] * len(group1) + ['Group2'] * len(group2) + ['Group3'] *len(group3) + ['Group4'] * len(group4)
+
+tukey_results = pairwise_tukeyhsd(all_data, group_labels)
+print("\nTukey-Kramer post-hoc test:")
+print(tukey_results)
+
+alpha=0.05
+if p_value<=alpha:
+    print("Reject null hypothesis")
+else:
+    print("Accept null hypothesis")
+
+
+Practical 6:
+
+A1. Linear Regression (Python)
+
+import numpy as np
+import pandas as pd
+from sklearn.datasets import fetch_california_housing
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error, r2_score
+housing = fetch_california_housing()
+housing_df = pd.DataFrame(housing.data, columns=housing.feature_names)
+print(housing_df)
+housing_df['PRICE'] = housing.target
+X = housing_df[['AveRooms']]
+y = housing_df['PRICE']
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+model = LinearRegression()
+model.fit(X_train, y_train)
+mse = mean_squared_error(y_test, model.predict(X_test))
+r2 = r2_score(y_test, model.predict(X_test))
+
+print("Mean Squared Error:", mse)
+print("R-squared:", r2)
+print("Intercept:", model.intercept_)
+print("Coefficient:", model.coef_)'
+
+A2. Linear regression (R)
+
+X=c(151,150,162,138,162,179)
+Y=c(60,61,62,55,62,70)
+r=lm(Y~X)
+print(r)
+plot(r)
+h=data.frame(X=180)
+result=predict(r,h)
+print(result)
+
+B. Multiple Linear Regression)
+
+X = housing_df.drop('PRICE',axis=1)
+y = housing_df['PRICE']
+X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.2,random_state=42)
+model = LinearRegression()
+model.fit(X_train,y_train)
+y_pred = model.predict(X_test)
+mse = mean_squared_error(y_test,y_pred)
+r2 = r2_score(y_test,y_pred)
+print("Mean Squared Error:",mse)
+print("R-squared:",r2)
+print("Intercept:",model.intercept_)
+print("Coefficient:",model.coef_)
+
+
+Practical 7 :
+
+A.Logiostic Regression Model
+
+install.packages("dplyr")
+install.packages("caTools")
+library(dplyr)
+library(caTools)
+
+head(mtcars)
+summary(mtcars)
+split<-sampl.spli(mtcars,SplitRatio=0.8)
+split
+
+train_reg = subset(mtcars,split=="TRUE")
+test_reg=(mtcars,split=="FALSE")
+logistic_model=glm(vs~wt+disp,data=train_reg,family="binomial")
+logistic_model
+summary(logistic_model)
+
+B. Performance evaluation
+
+install.packages("ROCR")
+library(ROCR)
+
+predict_reg = predict(logistic_model,test_reg,type="response")
+predict_reg
+
+predict_reg=ifelse(predict_reg>0.5,1,0)
+table(test_reg$vs,predict_reg)
+
+missing_classerr= mean(predict_reg != test_reg$vs)
+print(paste('Accuracy=',1-missing_classerr))
+
+ROCPred=prediction(predict_reg,test_reg$vs)
+ROCPer=performance(ROCPred,measure="tpr",x.measure="fpr")
+auc=performance(ROCPred,measure="auc")
+auc=auc@y.values[[1]]
+auc
+
+plot(ROCPer)
+plot(ROCPer,colorize=TRUE,print.cutoffs.at=seq(0.1,by=0.1),main="ROC CURVE")
+abline(a=0,b=1)
+auc=round(auc,4)
+legend(.6,.4,auc,title="AUC",cex=1)
+
+C. Decision Tree
+
+install.packages(c("rpart","rpart.plot"))
+library(rpart)
+library(rpart.plot)
+data(iris)
+tree=rpart(Species~.,data=iris,method="class")
+rpart.plot(tree,extra=106)
+
+
+Practical 7 (Python) :Logistic regression and Decision Tree
+
+import numpy as np
+import pandas as pd
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import accuracy_score, precision_score, recall_score, classification_report
+
+iris = load_iris()
+iris_df = pd.DataFrame(data=np.c_[iris['data'], iris['target']], columns=iris['feature_names'] +
+['target'])
+binary_df = iris_df[iris_df['target'] != 2]
+X = binary_df.drop('target', axis=1)
+y = binary_df['target']
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+logistic_model = LogisticRegression()
+logistic_model.fit(X_train, y_train)
+y_pred_logistic = logistic_model.predict(X_test)
+print("Logistic Regression Metrics")
+print("Accuracy: ", accuracy_score(y_test, y_pred_logistic))
+print("Precision:", precision_score(y_test, y_pred_logistic))
+print("Recall: ", recall_score(y_test, y_pred_logistic))
+
+print("\nClassification Report")
+print(classification_report(y_test, y_pred_logistic))
+
+decision_tree_model = DecisionTreeClassifier()
+decision_tree_model.fit(X_train, y_train)
+y_pred_tree = decision_tree_model.predict(X_test)
+print("\nDecision Tree Metrics")
+print("Accuracy: ", accuracy_score(y_test, y_pred_tree))
+print("Precision:", precision_score(y_test, y_pred_tree))
+print("Recall: ", recall_score(y_test, y_pred_tree))
+print("\nClassification Report")
+print(classification_report(y_test, y_pred_tree))
+
+
+Practical 8 : k-means clustering
+
+import pandas as pd
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.cluster import KMeans
+import matplotlib.pyplot as plt
+data = pd.read_csv("wholesale.csv")
+data.head()
+categorical_features = ['Channel', 'Region']
+continuous_features = ['Fresh', 'Milk', 'Grocery', 'Frozen', 'Detergents_Paper', 'Delicassen']
+data[continuous_features].describe()
+for col in categorical_features:
+dummies = pd.get_dummies(data[col], prefix = col)
+data = pd.concat([data, dummies], axis = 1)
+data.drop(col, axis = 1, inplace = True)
+data.head()
+mms = MinMaxScaler()
+mms.fit(data)
+data_transformed = mms.transform(data)
+sum_of_squared_distances = []
+K = range(1, 15)
+for k in K:
+km = KMeans(n_clusters=k)
+km = km.fit(data_transformed)
+
+sum_of_squared_distances.append(km.inertia_)
+plt.plot(K, sum_of_squared_distances, 'bx-')
+plt.xlabel('k')
+plt.ylabel('sum_of_squared_distances')
+plt.title('elbow Mehtod for optimal k')
+plt.show()
+
+
+Practical 9: Principle Component Analysis (PCA)
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.datasets import load_iris
+from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import PCA
+iris = load_iris()
+iris_df = pd.DataFrame(data=np.c_[iris['data'], iris['target']], columns=iris['feature_names'] +
+['target'])
+X = iris_df.drop('target', axis=1)
+y = iris_df['target']
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+pca = PCA()
+X_pca = pca.fit_transform(X_scaled)
+explained_variance_ratio = pca.explained_variance_ratio_
+plt.figure(figsize=(8, 6))
+plt.plot(np.cumsum(explained_variance_ratio), marker='o', linestyle='--')
+plt.title('Explained Variance Ratio')
+plt.xlabel('Number of Principal Components')
+plt.ylabel('Cumulative Explained Variance Ratio')
+plt.grid(True)
+
+plt.show()
+cumulative_variance_ratio = np.cumsum(explained_variance_ratio)
+n_components = np.argmax(cumulative_variance_ratio >= 0.95) + 1
+print(f"Number of principal components to explain 95% variance: {n_components}")
+pca = PCA(n_components=n_components)
+X_reduced = pca.fit_transform(X_scaled)
+plt.figure(figsize=(8, 6))
+plt.scatter(X_reduced[:, 0], X_reduced[:, 1], c=y, cmap='viridis', s=50, alpha=0.5)
+plt.title('Data in Reduced-dimensional Space')
+plt.xlabel('Principal Component 1')
+plt.ylabel('Principal Component 2')
+plt.colorbar(label='Target')
+plt.show()
+
+
+Practical 10: Data visualization and story telling
+
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+# Generate random data
+np.random.seed(42)  # Set a seed for reproducibility
+# Create a DataFrame with random data
+data = pd.DataFrame({
+'variable1': np.random.normal(0, 1, 1000),
+'variable2': np.random.normal(2, 2, 1000) + 0.5 * np.random.normal(0, 1, 1000),
+'variable3': np.random.normal(-1, 1.5, 1000),
+'category': pd.Series(np.random.choice(['A', 'B', 'C', 'D'], size=1000, p=[0.4, 0.3, 0.2, 0.1]),
+dtype='category')
+})
+# Create a scatter plot to visualize the relationship between two variables
+plt.figure(figsize=(10, 6))
+plt.scatter(data['variable1'], data['variable2'], alpha=0.5)
+plt.title('Relationship between Variable 1 and Variable 2', fontsize=16)
+plt.xlabel('Variable 1', fontsize=14)
+plt.ylabel('Variable 2', fontsize=14)
+plt.show()
+
+# Create a bar chart to visualize the distribution of a categorical variable
+plt.figure(figsize=(10, 6))
+sns.countplot(x='category', data=data)
+plt.title('Distribution of Categories', fontsize=16)
+plt.xlabel('Category', fontsize=14)
+plt.ylabel('Count', fontsize=14)
+plt.xticks(rotation=45)
+plt.show()
+# Create a heatmap to visualize the correlation between numerical variables
+plt.figure(figsize=(10, 8))
+numerical_cols = ['variable1', 'variable2', 'variable3']
+sns.heatmap(data[numerical_cols].corr(), annot=True, cmap='coolwarm')
+plt.title('Correlation Heatmap', fontsize=16)
+plt.show()
+# Data Storytelling
+print("Title: Exploring the Relationship between Variable 1 and Variable 2")
+print("\nThe scatter plot (Figure 1) shows the relationship between Variable 1 and Variable 2.
+We can observe a positive correlation, indicating that as Variable 1 increases, Variable 2 tends to
+increase as well. However, there is a considerable amount of scatter, suggesting that other factors
+may influence this relationship.")
+print("\nScatter Plot")
+print("Figure 1: Scatter Plot of Variable 1 and Variable 2")
+print("\nTo better understand the distribution of the categorical variable 'category', we created a
+bar chart (Figure 2). The chart reveals that Category A has the highest frequency, followed by
+Category B, Category C, and Category D. This information could be useful for further analysis
+or decision-making processes.")
+
+print("\nBar Chart")
+print("Figure 2: Distribution of Categories")
+print("\nAdditionally, we explored the correlation between numerical variables using a heatmap
+(Figure 3). The heatmap shows that Variable 1 and Variable 2 have a strong positive correlation,
+confirming the observation from the scatter plot. However, we can also see that Variable 3 has a
+moderate negative correlation with both Variable 1 and Variable 2, suggesting that it may have
+an opposing effect on the relationship between the first two variables.")
+print("\nHeatmap")
+print("Figure 3: Correlation Heatmap")
+print("\nIn summary, the visualizations and analysis provide insights into the relationships
+between variables, the distribution of categories, and the correlations between numerical
+variables. These findings can be used to inform further analysis, decision-making, or to generate
+new hypotheses for investigation.")
 </pre>
