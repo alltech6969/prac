@@ -645,4 +645,193 @@ print("\nIn summary, the visualizations and analysis provide insights into the r
 between variables, the distribution of categories, and the correlations between numerical
 variables. These findings can be used to inform further analysis, decision-making, or to generate
 new hypotheses for investigation.")
+
+
+============================================================================================================================================================================================Question's solution
+
+KMeans clustering ka he
+
+mport numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans
+from sklearn.datasets import load_iris
+from sklearn.metrics import silhouette_score
+from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import PCA
+
+# Load Iris dataset
+iris = load_iris()
+X = iris.data
+y = iris.target
+
+# Standardize features
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+
+# Silhouette analysis for determining optimal number of clusters
+silhouette_scores = []
+for n_clusters in range(2, 11):
+    kmeans = KMeans(n_clusters=n_clusters, random_state=42)
+    cluster_labels = kmeans.fit_predict(X_scaled)
+    silhouette_avg = silhouette_score(X_scaled, cluster_labels)
+    silhouette_scores.append(silhouette_avg)
+
+# Visualize silhouette scores
+plt.plot(range(2, 11), silhouette_scores, marker='o')
+plt.xlabel('Number of clusters')
+plt.ylabel('Silhouette Score')
+plt.title('Silhouette Analysis for KMeans Clustering')
+plt.show()
+
+# Choose optimal number of clusters based on silhouette score
+optimal_n_clusters = np.argmax(silhouette_scores) + 2
+print("Optimal number of clusters:", optimal_n_clusters)
+
+# Perform KMeans clustering with optimal number of clusters
+kmeans = KMeans(n_clusters=optimal_n_clusters, random_state=42)
+cluster_labels = kmeans.fit_predict(X_scaled)
+
+# Visualize clustering results (using PCA for visualization)
+pca = PCA(n_components=2)
+X_pca = pca.fit_transform(X_scaled)
+
+plt.figure(figsize=(8, 6))
+for i in range(optimal_n_clusters):
+    plt.scatter(X_pca[cluster_labels == i, 0], X_pca[cluster_labels == i, 1], label=f'Cluster {i+1}')
+plt.scatter(kmeans.cluster_centers_[:, 0], kmeans.cluster_centers_[:, 1], s=200, c='red', marker='X', label='Centroids')
+plt.title('KMeans Clustering of Iris Dataset')
+plt.xlabel('Principal Component 1')
+plt.ylabel('Principal Component 2')
+plt.legend()
+plt.show()
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+t-test
+
+import numpy as np
+from scipy import stats
+
+np.random.seed(42)
+
+sample1 = np.array([85, 95, 100, 80, 90, 97, 104, 95, 88, 92, 94, 99])
+sample2 = np.array([83, 85, 96, 92, 100, 104, 94, 95, 88, 90, 93, 94])
+
+t_statistic, p_value = stats.ttest_ind(sample1, sample2)
+
+alpha = 0.05
+print("Results of Two-Sample t-test:")
+print(f"t-statistic: {t_statistic}")
+print(f"p-value: {p_value}")
+print(f"Degrees of Freedom: {len(sample1) + len(sample2) - 2}")
+
+if p_value < alpha:
+    if np.mean(sample1) > np.mean(sample2):
+        print("Conclusion: There is significant evidence to reject the null hypothesis.")
+        print("Interpretation: The mean caffeine content of Sample 1 is significantly higher than that of Sample 2.")
+    else:
+        print("Conclusion: There is significant evidence to reject the null hypothesis.")
+        print("Interpretation: The mean caffeine content of Sample 2 is significantly higher than that of Sample 1.")
+else:
+    print("Conclusion: Fail to reject the null hypothesis.")
+    print("Interpretation: There is not enough evidence to claim a significant difference between the means.")
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+linear Regression load irris
+
+# Load the Iris dataset
+data(iris)
+df <- iris
+
+# Fit linear regression model
+model <- lm(petal.width ~ petal.length, data = df)
+
+# Print the summary of the model
+summary(model)
+
+# Load the required library
+library(ggplot2)
+
+# Create a scatter plot of petal.width against petal.length
+ggplot(df, aes(x = petal.length, y = petal.width)) +
+  geom_point() +  # Add data points
+  geom_smooth(method = "lm", se = FALSE, color = "blue") +  # Add linear regression line
+  labs(x = "Petal Length", y = "Petal Width", title = "Linear Regression on Iris Dataset")  # Add axis labels and title
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+logistic regression load iris
+
+import numpy as np
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score, classification_report
+from sklearn.datasets import load_iris
+
+# Load Iris dataset
+iris = load_iris()
+X = iris.data
+y = iris.target
+
+# Consider only two classes: setosa (class 0) and non-setosa (class 1)
+X_binary = X[y != 0]
+y_binary = y[y != 0]
+
+# Split data into train and test sets
+X_train, X_test, y_train, y_test = train_test_split(X_binary, y_binary, test_size=0.2, random_state=42)
+
+# Fit logistic regression model
+model = LogisticRegression()
+model.fit(X_train, y_train)
+
+# Predictions
+y_pred = model.predict(X_test)
+
+# Evaluate model performance
+accuracy = accuracy_score(y_test, y_pred)
+report = classification_report(y_test, y_pred)
+
+print("Accuracy:", accuracy)
+print("Classification Report:")
+print(report)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+multiple linear regression diabetes data
+
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
+from sklearn.datasets import load_diabetes
+
+# Load Pima Indian Diabetes dataset
+diabetes = load_diabetes()
+X = diabetes.data
+y = diabetes.target
+
+# Convert to DataFrame for better understanding
+df = pd.DataFrame(data=X, columns=diabetes.feature_names)
+df['Target'] = y
+
+# Features and target variable
+X = df.drop('Target', axis=1)
+y = df['Target']
+
+# Split data into train and test sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Fit Multiple Linear Regression model
+mlr_model = LinearRegression()
+mlr_model.fit(X_train, y_train)
+
+# Predictions
+y_pred = mlr_model.predict(X_test)
+
+# Evaluate model performance
+mse = mean_squared_error(y_test, y_pred)
+print("Mean Squared Error:", mse)
 </pre>
