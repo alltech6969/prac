@@ -839,4 +839,45 @@ y_pred = mlr_model.predict(X_test)
 # Evaluate model performance
 mse = mean_squared_error(y_test, y_pred)
 print("Mean Squared Error:", mse)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+FOR 3 SAMPLE WITH DIAGRAM
+import matplotlib.pyplot as plt
+import numpy as np
+from scipy.stats import f_oneway
+
+# Define the class grades
+class_A = [85, 90, 88, 82, 87]
+class_B = [76, 78, 80, 81, 75]
+class_C = [92, 88, 94, 89, 90]
+
+# Calculate the mean grades for each class
+mean_A = np.mean(class_A)
+mean_B = np.mean(class_B)
+mean_C = np.mean(class_C)
+
+# Perform one-way ANOVA
+f_statistic, p_value = f_oneway(class_A, class_B, class_C)
+
+# Print the results
+print("F-statistic:", f_statistic)
+print("P-value:", p_value)
+
+if p_value < 0.05:
+    print("Reject null hypothesis: There is a significant difference between the means of the classes.")
+else:
+    print("Fail to reject null hypothesis: There is no significant difference between the means of the classes.")
+
+# Create bar graph
+classes = ['Class A', 'Class B', 'Class C']
+means = [mean_A, mean_B, mean_C]
+
+plt.bar(classes, means, color=['blue', 'green', 'red'])
+plt.title('Mean Grades of Each Class')
+plt.ylabel('Mean Grade')
+plt.xlabel('Classes')
+
+# Show plot
+plt.show()
 </pre>
